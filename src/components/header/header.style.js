@@ -23,7 +23,7 @@ export const NavBarWrapper = styled.div`
   .position-fixed {
     background: ${({ theme }) => theme.color__background};
     font-size: 2rem;
-    z-inedx: 100;
+    z-index: 100;
     ul li a {
       color: red !important;
     }

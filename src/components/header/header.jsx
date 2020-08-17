@@ -14,31 +14,54 @@ import { FaRegSun } from "react-icons/fa";
 import { globalHistory } from "@reach/router";
 import { pageLinks } from "../../constants/links";
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
+  const [fixed, setFixed] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", setHeaderFixed);
+
+    return () => {
+      window.removeEventListener("scroll", setHeaderFixed);
+    };
+  }, []);
+  const setHeaderFixed = () => {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= 50) {
+      setFixed(true);
+    } else {
+      setFixed(false);
+    }
+  };
+
+  const path = globalHistory.location.pathname === "/" ? true : false;
+
   const linkTemplet = pageLinks.map(link => (
-    <li key={link.id}>
-      <A to={link.url} activeClassName="active">
+    <li key={link.id} path={path ? 1 : 0}>
+      <A to={link.url} activeClassName="active" path={path ? 1 : 0}>
         {link.text}
       </A>
     </li>
   ));
+
   return (
-    <NavBarContainer>
-      <Wrapper>
-        <NavBarWrapper>
-          <LogoWrapper>
-            <A to="/">
+    <NavBarContainer className={fixed ? "position-fixed" : ""}>
+      <NavBarWrapper>
+        <LogoWrapper>
+          <A to="/">
+            {path ? (
               <img src={LogoDark} alt="logo" />
-            </A>
-          </LogoWrapper>
-          <NavLinksWrapper>
-            <ul>{linkTemplet}</ul>
-            <ThemeButton className="button">
-              <FaRegSun />
-            </ThemeButton>
-          </NavLinksWrapper>
-        </NavBarWrapper>
-      </Wrapper>
+            ) : (
+              <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
+            )}
+          </A>
+        </LogoWrapper>
+        <NavLinksWrapper>
+          <ul>{linkTemplet}</ul>
+          <ThemeButton className="button" onClick={toggleTheme}>
+            <FaRegSun />
+          </ThemeButton>
+        </NavLinksWrapper>
+      </NavBarWrapper>
     </NavBarContainer>
   );
 };
@@ -46,29 +69,5 @@ const Header = () => {
 export default Header;
 
 // const NavBar = ({  location, history }) => {
-// const [fixed, setFixed] = useState(false);
-// useEffect(() => {
-// 	window.addEventListener("scroll", setHeaderFixed);
-
-// 	return () => {
-// 		window.removeEventListener("scroll", setHeaderFixed);
-// 	};
-// }, []);
-// const setHeaderFixed = () => {
-// 	console.log(window.scrollY);
-
-// 	if (window.scrollY >= 50) {
-// 		setFixed(true);
-// 	} else {
-// 		setFixed(false);
-// 	}
-// };
-
-// 	const path = globalHistory.location.pathname === "/" ? true : false;
-
-// 	return (
-
-// 	);
-// };
 
 // export default NavBar;
