@@ -3,7 +3,6 @@ export const useDarkMode = () => {
   const isBrowser = () => typeof window !== "undefined";
 
   const themelock = isBrowser() && window.localStorage.getItem("theme");
-  console.log(themelock);
   const [theme, setTheme] = useState(themelock || "dark");
   const setMode = mode => {
     window.localStorage.setItem("theme", mode);

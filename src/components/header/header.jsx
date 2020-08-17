@@ -24,8 +24,6 @@ const Header = ({ theme, toggleTheme }) => {
     };
   }, []);
   const setHeaderFixed = () => {
-    console.log(window.scrollY);
-
     if (window.scrollY >= 50) {
       setFixed(true);
     } else {
@@ -36,19 +34,18 @@ const Header = ({ theme, toggleTheme }) => {
   const path = globalHistory.location.pathname === "/" ? true : false;
 
   const linkTemplet = pageLinks.map(link => (
-    <li key={link.id} path={path ? 1 : 0}>
+    <li key={link.id} path={path ? 1 : 0} fixed={fixed ? 1 : 0}>
       <A to={link.url} activeClassName="active" path={path ? 1 : 0}>
         {link.text}
       </A>
     </li>
   ));
-
   return (
-    <NavBarContainer className={fixed ? "position-fixed" : ""}>
+    <NavBarContainer fixed={fixed ? 1 : 0} path={path ? 1 : 0}>
       <NavBarWrapper>
         <LogoWrapper>
           <A to="/">
-            {path ? (
+            {path && !fixed ? (
               <img src={LogoDark} alt="logo" />
             ) : (
               <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
@@ -57,7 +54,12 @@ const Header = ({ theme, toggleTheme }) => {
         </LogoWrapper>
         <NavLinksWrapper>
           <ul>{linkTemplet}</ul>
-          <ThemeButton className="button" onClick={toggleTheme}>
+          <ThemeButton
+            className="button"
+            onClick={toggleTheme}
+            path={path ? 1 : 0}
+            fixed={fixed ? 1 : 0}
+          >
             <FaRegSun />
           </ThemeButton>
         </NavLinksWrapper>

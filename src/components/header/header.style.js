@@ -7,6 +7,11 @@ export const NavBarContainer = styled.header`
   top: 0;
   width: 100%;
   box-shadow: 0 0 1px 0px #6f6d6d;
+  background: ${({ theme, fixed }) => (fixed ? theme.color__background : "")};
+  z-index: 100;
+  a {
+    color: ${({ theme, fixed }) => (fixed ? theme.color__text : "")};
+  }
 `;
 export const Wrapper = styled.div``;
 
@@ -20,14 +25,6 @@ export const NavBarWrapper = styled.div`
   align-items: center;
   height: 10vh;
   padding: 2rem;
-  .position-fixed {
-    background: ${({ theme }) => theme.color__background};
-    font-size: 2rem;
-    z-index: 100;
-    ul li a {
-      color: red !important;
-    }
-  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -55,9 +52,7 @@ export const NavLinksWrapper = styled.div`
        border-bottom: 2px solid ${({ theme }) => theme.color__primary};
 
       }
-      a {
-   
-      }
+    
     }
   }
   
@@ -69,8 +64,8 @@ export const NavLinksWrapper = styled.div`
 
 export const A = styled(Link)`
   text-decoration: none;
-  color: ${({ path, theme }) =>
-    path ? theme.color__white : theme.color__text};
+  color: ${({ path, fixed, theme }) =>
+    path ? theme.color__white : path && fixed ? theme.color__text : ""};
   font-size: 1.6rem;
   font-weight: 400;
 `;
@@ -78,8 +73,12 @@ export const A = styled(Link)`
 export const ThemeButton = styled.button`
   background: transparent;
   border: none;
-  color: ${({ path, theme }) =>
-    path ? theme.color__white : theme.color__text};
+  color: ${({ path, fixed, theme }) =>
+    path && fixed
+      ? theme.color__text
+      : path
+      ? theme.color__white
+      : theme.color__text};
   font-size: 4.3rem;
 
   display: flex;
