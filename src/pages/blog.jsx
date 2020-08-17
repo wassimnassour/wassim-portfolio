@@ -1,6 +1,7 @@
 import React from "react";
+import { Layout } from "../components/index";
 const Blog = () => {
-	return <h1>Blog</h1>;
+  return <Layout> Hello from Blog</Layout>;
 };
 
 export default Blog;

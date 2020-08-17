@@ -1,7 +1,8 @@
 import React from "react";
+import { Layout } from "../components/index";
 
 const Contact = () => {
-	return <h1>contact</h1>;
+  return <Layout> Hello from Contact</Layout>;
 };
 
 export default Contact;
