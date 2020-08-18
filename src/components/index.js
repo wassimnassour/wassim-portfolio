@@ -2,5 +2,18 @@ import Header from "./header/header";
 import Footer from "./footer/footer";
 import Layout from "./layout/layout";
 import Main from "./mainContainer/mainContainer";
-import HomeContent from "./homeContent/homeContent";
-export { Header, Footer, Layout, Main, HomeContent };
+import HomeContent from "./landing/home/homeContent";
+import CustomButton from "./customButton/customButton";
+import Skills from "./landing/skills/skills";
+import { Title } from "./utilityStyle";
+
+export {
+  Header,
+  Footer,
+  Layout,
+  Main,
+  HomeContent,
+  CustomButton,
+  Skills,
+  Title,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import { CustomButton } from "../../index";
 import { HeaderContainer, ButtonWrapper } from "./homeContent.style";
 
 const HomeContent = () => {
@@ -12,7 +13,9 @@ const HomeContent = () => {
         >
           <path
             d="M0.00,49.98 C231.09,125.81 149.26,-43.91 500.00,49.98 L513.26,152.45 L0.00,150.00 Z"
-            style={{ stroke: "none", fill: "#0274dc" }}
+            style={{
+              stroke: "none",
+            }}
           ></path>
         </svg>
       </div>
@@ -25,8 +28,8 @@ const HomeContent = () => {
           knowldeg in Back-end , and i love solving problems
         </span>
         <ButtonWrapper>
-          {/* <Button content={"Resume"} url={"resume"} color="blue" /> */}
-          {/* <Button content={"Contact me"} url={"contact"} color="blue" /> */}
+          <CustomButton content={"Resume"} url={"resume"} color="blue" />
+          <CustomButton content={"Contact me"} url={"contact"} color="blue" />
         </ButtonWrapper>
       </div>
     </HeaderContainer>

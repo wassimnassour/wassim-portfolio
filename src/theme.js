@@ -8,6 +8,7 @@ export const darkTheme = {
   color__text: "#EEEE",
   color__sub__text: "#eee",
   color__footer: "#343a40",
+  color__svg: "#2b2b2bba",
 
   // breakpoint
   breakpoint_xs: 0,
@@ -19,6 +20,8 @@ export const darkTheme = {
 };
 
 export const lightTheme = {
+  color__svg: "#e2e2e2",
+
   color__white: "#EEE",
   color__gray: "#6c757d",
   color__footer: "#007bff",

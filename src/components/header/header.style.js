@@ -23,13 +23,12 @@ export const NavBarWrapper = styled.div`
   color: ${({ theme }) => theme.color__white};
   display: flex;
   align-items: center;
-  height: 10vh;
-  padding: 2rem;
+  height: ${({ fixed }) => (fixed ? "7.2vh" : "10vh")};
+  padding: 2rem 0;
 `;
 
 export const LogoWrapper = styled.div`
   font-size: 1.5rem;
-  padding-left: 2rem;
   height: 5rem;
   @media (max-width: ${({ theme }) => theme.breakpoint_lg}) {
     font-size: 1.5rem;
@@ -40,7 +39,6 @@ export const NavLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 6rem;
-  padding-right:3.5rem;
   ul {
     display: flex;
     align-items: center;
@@ -48,24 +46,22 @@ export const NavLinksWrapper = styled.div`
       list-style: none;
       margin: 1.3rem;
       font-size: 1.5rem;
-      .active{
-       border-bottom: 2px solid ${({ theme }) => theme.color__primary};
-
+      .active {
+        border-bottom: 2px solid ${({ theme }) => theme.color__primary};
       }
-    
     }
   }
-  
-
-  /* @media (max-width: ${({ theme }) => theme.breakpoint_lg}) {
-    display: none;
-  } */
 `;
 
 export const A = styled(Link)`
   text-decoration: none;
-  color: ${({ path, fixed, theme }) =>
-    path ? theme.color__white : path && fixed ? theme.color__text : ""};
+  /* color: ${({ path, fixed, theme }) =>
+    path && fixed
+      ? theme.color__text
+      : path
+      ? theme.color__white
+      : theme.color__text}; */
+      color:${({ theme }) => theme.color__text};
   font-size: 1.6rem;
   font-weight: 400;
 `;
@@ -73,12 +69,14 @@ export const A = styled(Link)`
 export const ThemeButton = styled.button`
   background: transparent;
   border: none;
-  color: ${({ path, fixed, theme }) =>
+  /* color: ${({ path, fixed, theme }) =>
     path && fixed
       ? theme.color__text
       : path
       ? theme.color__white
-      : theme.color__text};
+      : theme.color__text}; */
+      color:${({ theme }) => theme.color__text};
+
   font-size: 4.3rem;
 
   display: flex;

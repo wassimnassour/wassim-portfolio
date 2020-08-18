@@ -42,24 +42,15 @@ const Header = ({ theme, toggleTheme }) => {
   ));
   return (
     <NavBarContainer fixed={fixed ? 1 : 0} path={path ? 1 : 0}>
-      <NavBarWrapper>
+      <NavBarWrapper fixed={fixed ? 1 : 0}>
         <LogoWrapper>
           <A to="/">
-            {path && !fixed ? (
-              <img src={LogoDark} alt="logo" />
-            ) : (
-              <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
-            )}
+            <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
           </A>
         </LogoWrapper>
         <NavLinksWrapper>
           <ul>{linkTemplet}</ul>
-          <ThemeButton
-            className="button"
-            onClick={toggleTheme}
-            path={path ? 1 : 0}
-            fixed={fixed ? 1 : 0}
-          >
+          <ThemeButton className="button" onClick={toggleTheme}>
             <FaRegSun />
           </ThemeButton>
         </NavLinksWrapper>
