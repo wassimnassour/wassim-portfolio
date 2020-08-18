@@ -1,15 +1,16 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 export const blueButton = css`
-  background-color: ${({ theme }) => theme.color__primary};
   border: 1.3px solid #3a3a3a;
+  background-color: ${({ theme }) => theme.color__primary};
 
   color: ${({ theme }) => theme.color__white};
 `;
 
 export const BlackButton = css`
-  background-color: #212121;
-  color: white;
+  color: ${({ theme }) => theme.color__text};
+
+  border: 1px solid ${({ theme }) => theme.color__gray};
 `;
 
 const cheeckColor = props => {
@@ -23,7 +24,6 @@ export const ButtonWrapper = styled(Link)`
   text-align: center;
   text-decoration: none;
   font-weight: 400;
-
   min-width: 130px;
   margin: 1rem;
   font-size: 1.5rem;

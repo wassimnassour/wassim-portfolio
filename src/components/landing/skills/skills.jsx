@@ -38,7 +38,7 @@ const Skills = () => {
           <h2>Fast Learner</h2>
         </div>
       </div>
-      <CustomButton content="see More" color="blue" utl="/resume" />
+      <CustomButton content="see More" color="black" utl="/resume" />
     </SkillsContainer>
   );
 };

@@ -29,7 +29,7 @@ const HomeContent = () => {
         </span>
         <ButtonWrapper>
           <CustomButton content={"Resume"} url={"resume"} color="blue" />
-          <CustomButton content={"Contact me"} url={"contact"} color="blue" />
+          <CustomButton content={"Contact me"} url={"contact"} color="black" />
         </ButtonWrapper>
       </div>
     </HeaderContainer>
