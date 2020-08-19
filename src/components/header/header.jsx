@@ -8,7 +8,6 @@ import {
   A,
   ThemeButton,
   NavBarWrapper,
-  Wrapper,
 } from "./header.style";
 import { FaRegSun } from "react-icons/fa";
 import { globalHistory } from "@reach/router";

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Title } from "../../utilityStyle";
 import { ProjectSectionContainer, ProjectWrapper } from "./project.style";
-import { useStaticQuery, graphql } from "gatsby";
+
 import { CustomButton } from "../../index";
-import { FaGithub, FaRegStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
 import { AiOutlineFork } from "react-icons/ai";
 
@@ -55,7 +55,7 @@ const Project = () => {
             ))
           : "loading"}
       </ProjectWrapper>
-      <CustomButton color="blue" content="See more" url="/project" />
+      <CustomButton color="black" content="See more" url="/project" />
     </ProjectSectionContainer>
   );
 };
