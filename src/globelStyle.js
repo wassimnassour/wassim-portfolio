@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.25s linear;
     a{
       text-decoration:none;
+      color:inherit;
 
     }
     li{

@@ -11,9 +11,6 @@ export const SkillsContainer = styled.section`
   justify-content: center;
   align-items: center;
   h1 {
-    font-size: 3rem;
-    border-bottom: 1.6px solid ${({ theme }) => theme.color__primary};
-    display: inline-block;
   }
   .skills {
     display: flex;

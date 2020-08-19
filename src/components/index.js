@@ -6,6 +6,7 @@ import HomeContent from "./landing/home/homeContent";
 import CustomButton from "./customButton/customButton";
 import Skills from "./landing/skills/skills";
 import { Title } from "./utilityStyle";
+import Project from "./landing/project/project";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   CustomButton,
   Skills,
   Title,
+  Project,
 };

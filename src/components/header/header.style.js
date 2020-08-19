@@ -23,7 +23,7 @@ export const NavBarWrapper = styled.div`
   color: ${({ theme }) => theme.color__white};
   display: flex;
   align-items: center;
-  height: ${({ fixed }) => (fixed ? "7.2vh" : "10vh")};
+  height: ${({ fixed }) => (fixed ? "7.2vh" : "7.4vh")};
   padding: 2rem 0;
 `;
 

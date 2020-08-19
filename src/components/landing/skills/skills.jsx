@@ -19,7 +19,6 @@ const Skills = () => {
       }
     }
   `);
-  console.log(data);
 
   return (
     <SkillsContainer>

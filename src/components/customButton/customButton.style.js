@@ -9,7 +9,6 @@ export const blueButton = css`
 
 export const BlackButton = css`
   color: ${({ theme }) => theme.color__text};
-
   border: 1px solid ${({ theme }) => theme.color__gray};
 `;
 
