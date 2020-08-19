@@ -8,7 +8,8 @@ export const GlobalStyle = createGlobalStyle`
         font-size:62.5%;
   }
   body {
-  
+  background: ${({ theme }) => theme.color__background};
+    color: ${({ theme }) => theme.color__text};  
     height: 100vh;
     overflow-x: hidden;
      margin: 0;
@@ -17,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.25s linear;
     a{
       text-decoration:none;
+      color:inherit;
 
     }
     li{
@@ -26,5 +28,3 @@ export const GlobalStyle = createGlobalStyle`
       padding-left:0;
     }
   }`;
-/* background: ${({ theme }) => theme.color__background};
-    color: ${({ theme }) => theme.color__text};  */

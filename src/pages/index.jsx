@@ -1,6 +1,12 @@
 import React from "react";
-import { Layout } from "../components/index";
+import { Layout, HomeContent, Skills, Project } from "../components/index";
 
 export default function Home() {
-  return <Layout>Home</Layout>;
+  return (
+    <Layout>
+      <HomeContent />
+      <Skills />
+      <Project />
+    </Layout>
+  );
 }

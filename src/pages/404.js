@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "../components/index";
 
 const Erorre = () => {
-  return <div>Error</div>;
+  return <Layout>Error</Layout>;
 };
 
 export default Erorre;
