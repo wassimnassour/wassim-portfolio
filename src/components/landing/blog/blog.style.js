@@ -19,7 +19,7 @@ export const BlogWrapper = styled.div`
 export const Article = styled.article`
 	background: ${({ theme }) => theme.color__svg};
 
-	width: 29%;
+	width: 31.5%;
 	text-align: center;
 	font-size: 1.6rem;
 	font-weight: 600;
