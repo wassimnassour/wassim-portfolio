@@ -1,18 +1,21 @@
-const path = require("path");
-exports.cretePages = async ({ graphql, actions }) => {
-	const { cretePage } = actions;
-	const Resualt = qraphql(` querySlug {
-  allContentfulBlogPost {
-    nodes {
-      slug
+const path = require(`path`);
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const Resualt = await graphql(`
+    {
+      allContentfulBlogPost {
+        nodes {
+          slug
+        }
+      }
     }
-   }
- }`);
-	Resualt.allContentfulBlogPost.nodes.forEach(node => {
-		cretePage({
-			path: `blog/${node.slug}`,
-			components: path.resolve("your Templete Here"),
-			context: { slug: node.slug },
-		});
-	});
+  `);
+  Resualt.data.allContentfulBlogPost.nodes.forEach(node => {
+    createPage({
+      path: `blog/${node.slug}`,
+      component: path.resolve(`src/templete/blog/blog.js`),
+
+      context: { slug: node.slug },
+    });
+  });
 };
