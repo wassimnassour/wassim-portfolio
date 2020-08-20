@@ -35,13 +35,13 @@ module.exports = {
         display: "swap",
       },
     },
-
+    //add contentfull
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `k35f0etvf2j1`,
 
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],

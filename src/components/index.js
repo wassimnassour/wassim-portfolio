@@ -7,6 +7,7 @@ import CustomButton from "./customButton/customButton";
 import Skills from "./landing/skills/skills";
 import { Title } from "./utilityStyle";
 import Project from "./landing/project/project";
+import Blog from "./landing/blog/blog";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   Skills,
   Title,
   Project,
+  Blog,
 };
