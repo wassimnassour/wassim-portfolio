@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   plugins: [
     {
@@ -29,6 +33,15 @@ module.exports = {
           `source sans pro\:200,300,400,600,700`, // you can also specify font weights and styles
         ],
         display: "swap",
+      },
+    },
+
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `k35f0etvf2j1`,
+
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
