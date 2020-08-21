@@ -35,7 +35,7 @@ module.exports = {
         display: "swap",
       },
     },
-
+    //add contentfull
     {
       resolve: `gatsby-source-contentful`,
       options: {
