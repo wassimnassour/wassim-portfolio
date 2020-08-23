@@ -4,7 +4,6 @@ export const pageLinks = [
     text: "Home",
     url: "/",
   },
-
   {
     id: 3,
     text: "About me",
