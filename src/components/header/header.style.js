@@ -64,6 +64,7 @@ export const A = styled(Link)`
       color:${({ theme }) => theme.color__text};
   font-size: 1.6rem;
   font-weight: 400;
+
 `;
 
 export const ThemeButton = styled.button`
