@@ -9,6 +9,7 @@ import { Title } from "./utilityStyle";
 import Project from "./landing/project/project";
 import Blog from "./landing/blog/blog";
 import Posts from "./blogPage/posts/posts";
+import AboutPage from "./aboutPage/about";
 export {
   Header,
   Footer,
@@ -21,4 +22,5 @@ export {
   Project,
   Blog,
   Posts,
+  AboutPage,
 };

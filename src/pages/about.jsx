@@ -1,7 +1,14 @@
 import React from "react";
-import { Layout } from "../components/index";
+import { Layout, AboutPage } from "../components/index";
+import { BigTitle } from "../components/utilityStyle";
+
 const About = () => {
-  return <Layout> Hello from About</Layout>;
+	return (
+		<Layout>
+			<BigTitle>About</BigTitle>
+			<AboutPage />
+		</Layout>
+	);
 };
 
 export default About;
