@@ -21,11 +21,11 @@ export const ContactPageContainer = styled.div`
       align-items: center;
       height: 8rem;
       border: 1px solid #6c757d;
-      margin: 0 0.4rem 0.6rem;
+      margin: 0 0.4rem 1.2rem;
     }
 
     .icon {
-      color: ${({ theme }) => theme.color__text};
+      color: ${({ theme }) => theme.color__primary};
       font-size: 4rem;
       margin-right: 1rem;
       padding: 2rem;
