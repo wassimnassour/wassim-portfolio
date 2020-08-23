@@ -8,7 +8,7 @@ export const ContactPageContainer = styled.div`
   justify-content: center;
   margin: 8rem 0 0;
   .section1 {
-    width: 295px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     margin: 3rem 3rem 0.6rem 0;
