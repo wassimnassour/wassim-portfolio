@@ -48,7 +48,7 @@ const ContactPage = () => {
           actions.setSubmitting(false);
           actions.resetForm();
           handleServerResponse(true, "Thank you for getting in touch! !");
-          navigate("/");
+          navigate("/thank-you");
         })
         .catch(error => {
           actions.setSubmitting(false);
