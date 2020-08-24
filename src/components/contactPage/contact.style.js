@@ -39,24 +39,42 @@ export const ContactPageContainer = styled.div`
 `;
 export const FormContainer = styled.div`
   width: 455px;
-  height: 537px;
+
   h2 {
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 7px;
+    margin-bottom: 0;
   }
 `;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  & > * :not(a) {
+  .error {
+    font-size: 1.3rem;
+    color: red;
+    margin: 0.1rem 0 0.8rem;
+  }
+  .succes {
+      font-size: 1.3rem;
+    color: green;
+    text-align: left;
+    padding: 1rem 0;
+    box-shadow: 1px 1px 34px -25px #6c757d;
+}
+  }
+
+  input {
+    &:focus {
+      background: ${({ theme }) => theme.color__background};
+    }
+
     background-color: ${({ theme }) => theme.color__background};
     margin: 1.3rem 0;
     color: ${({ theme }) => theme.color__text};
     padding: 1rem 0.8rem;
     outline: none;
-    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
+    box-shadow: 0 4px 10px -8px rgba(0, 0, 0, 0.78);
     border: 1px solid #6c757d;
     font-size: 1.5rem;
     font-family: inherit;
@@ -64,15 +82,39 @@ export const Form = styled.form`
       color: ${({ theme }) => theme.color__gray};
     }
   }
-  & > :first-child {
-    margin: 0 0 1.3rem;
+  textarea {
+    background-color: ${({ theme }) => theme.color__background};
+    margin: 1.3rem 0;
+    color: ${({ theme }) => theme.color__text};
+    padding: 1rem 0.8rem;
+    outline: none;
+    box-shadow: 0 4px 10px -8px rgba(0, 0, 0, 0.78);
+    border: 1px solid #6c757d;
+    font-size: 1.5rem;
+    font-family: inherit;
+    height: 320px;
+    ::placeholder {
+      color: ${({ theme }) => theme.color__gray};
+    }
   }
-  & > :nth-last-child(2) {
-    height: 300px;
-  }
-  a {
+  button {
+    background-color: ${({ theme }) => theme.color__background};
+    margin: 1.3rem 0;
+    color: ${({ theme }) => theme.color__text};
+    padding: 1rem 0.8rem;
+    outline: none;
+    box-shadow: 0 4px 10px -8px rgba(0, 0, 0, 0.78);
+    border: 1px solid #6c757d;
+    font-size: 1.5rem;
+    font-family: inherit;
+    ::placeholder {
+      color: ${({ theme }) => theme.color__gray};
+    }
     width: 219px;
     :hover {
+      color: white;
+      transform: scale(1.02) translateY(-0.1rem);
+      transition: transform 0.2s ease-out;
       background: ${({ theme }) => theme.color__primary__2};
     }
   }
