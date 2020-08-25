@@ -27,7 +27,8 @@ const ThankYou = ({ data }) => {
 			<SuccesContainer>
 				<img src={data.file.publicURL} />
 				<h1>
-					Thank you for getting in touch &#128151;.
+					Thank you for getting in touch
+					<span alt="image for love"> &#128151;</span>.
 					<br />i would like to thank you for writing to me.
 					<br /> i will reply by email as soon as possible.
 				</h1>

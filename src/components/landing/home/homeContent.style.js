@@ -3,15 +3,16 @@ import styled from "styled-components";
 export const HeaderContainer = styled.section`
   width: 72%;
   margin: 1rem auto;
-  // justify-content: center;
+
+
   align-items: center;
   display: flex;
   height: 37vh;
   h1 {
     
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.15em; /* Adjust as needed */
+    white-space: nowrap;
+    margin: 0 auto; 
+    letter-spacing: 0.15em; 
 
     font-size: 5rem;
     margin-bottom: 0.5rem;
@@ -52,6 +53,58 @@ export const HeaderContainer = styled.section`
       }
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+  width:100%;
+   height: 44vh;
+  h1{
+    font-size:4rem;
+  }
+     .content{
+          display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+        margin: 0 auto;
+    width: 90%;
+    align-items: flex-start;
+    padding: 2rem;
+
+    margin: 2rem auto;
+    span{
+      width:unset;
+          font-size: 1.35rem;
+    }
+    h1{
+      margin:0;
+    }
+
+    }
+     svg{
+    display:none;
+  
+   }
+   
+  
+    @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+      height:60vh;
+     .content{
+        margin: 2rem 0;
+            text-align: center;
+            align-items:center;
+    width: 94%;
+     padding: 0 0 0 1.5rem;
+    h1{
+      font-size: 3.1rem;
+
+     }
+
+    }a{
+        width: 156px;
+    height: 44px;
+    border-radius: 9px;
+    }
+       
+    }
+
 `;
 
 export const ButtonWrapper = styled.div`

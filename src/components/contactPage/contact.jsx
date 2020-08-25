@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FormContainer, Form, ContactPageContainer } from "./contact.style";
-import { CustomButton } from "../index";
+
 import { FaEnvelope, FaPhoneAlt, FaHome } from "react-icons/fa";
 import { useFormik } from "formik";
 import axios from "axios";

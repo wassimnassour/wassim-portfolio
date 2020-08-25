@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const SideBarContainer = styled.div`
 	@media (min-width: ${({ theme }) => theme.breakpoint_T}) {
@@ -6,7 +6,6 @@ export const SideBarContainer = styled.div`
 	}
 	ul {
 		margin: 7rem 0;
-
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -54,7 +53,7 @@ export const Button = styled.div`
 	border: none;
 	font-size: 2rem;
 	position: absolute;
-	top: 1rem;
+	top: 2rem;
 	right: 1rem;
 
 	.svg {
@@ -70,6 +69,8 @@ export const Button = styled.div`
 			right: "33%",
 		}};
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+		right: 0;
+		margin-right: 1rem;
 		${({ open }) =>
 			open && {
 				right: "60%",

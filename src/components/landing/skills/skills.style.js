@@ -3,27 +3,27 @@ import styled from "styled-components";
 export const SkillsContainer = styled.section`
   height: auto;
 
-  margin: 2rem 0;
+  margin: 3.5rem 0;
 
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-  }
+
   .skills {
     display: flex;
     margin: 0 2rem;
     justify-content: space-between;
     align-items: center;
     .skill {
-      width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 1rem;
+      height: 241px;
+      box-shadow: 0 0 2px grey;
+      margin: 1rem;
       h2 {
         font-size: 1.6rem;
         margin: 2rem;
@@ -32,6 +32,33 @@ export const SkillsContainer = styled.section`
         width: 73%;
         height: 80%;
       }
+    }
+  }
+
+  //media queries form Tablete
+  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+    .skills {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skill {
+      width: 196px;
+
+      margin: 1rem;
+      box-shadow: 0px 0 2px 0px #929292;
+    }
+  }
+  //media queries form Mobile
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    .skills {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skill {
+      width: 274px;
+
+      margin: 1rem;
+      box-shadow: 0px 0 2px 0px #929292;
     }
   }
 `;

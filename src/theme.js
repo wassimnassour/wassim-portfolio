@@ -12,8 +12,8 @@ export const darkTheme = {
   color__svg: "#2b2b2bba",
 
   // breakpoint
-  breakpoint_M: "460px",
-  breakpoint_T: "776px",
+  breakpoint_M: "500px",
+  breakpoint_T: "800px",
   breakpoint_L: "1000px",
   breakpoint_D: "1200px",
 
@@ -34,8 +34,8 @@ export const lightTheme = {
   color__sub__text: "#6b6b6b",
 
   // breakpoint
-  breakpoint_M: "460px",
-  breakpoint_T: "776px",
+  breakpoint_M: "500px",
+  breakpoint_T: "800px",
   breakpoint_L: "1000px",
   breakpoint_D: "1200px",
   shadow: "0 5px 15px rgba(0, 0, 0, 0.3)",

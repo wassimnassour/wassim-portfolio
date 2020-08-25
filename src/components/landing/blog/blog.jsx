@@ -12,6 +12,9 @@ const Blog = () => {
         nodes {
           title
           slug
+          descrption1 {
+            descrption1
+          }
           image {
             fluid {
               ...GatsbyContentfulFluid
@@ -36,6 +39,7 @@ const Blog = () => {
           <Article>
             <Link to={`blog/${Element.slug}`}>
               <Img fluid={Element.image.fluid} />
+
               <h1>{Element.title} </h1>
             </Link>
           </Article>

@@ -19,13 +19,14 @@ const HomeContent = () => {
           ></path>
         </svg>
       </div>
-      <div>
+      <div className="content">
         <h1>Wassim Nassour</h1>
         {/*        // <h4>i’m self-taught , front-end developer </h4>
          */}{" "}
         <span>
-          Hi my name is wassim ,am self-taught front-end developer also basic
-          knowldeg in Back-end , and i love solving problems
+          Hi my name is wassim ,<br />
+          am self-taught front-end developer also have basic knowldeg in
+          Back-end , and i love solving problems
         </span>
         <ButtonWrapper>
           <CustomButton content={"Resume"} url={"resume"} color="blue" />

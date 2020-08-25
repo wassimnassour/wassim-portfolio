@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Header, Footer, Main, SideBar } from "../index";
+import React from "react";
+import { Header, Footer, Main } from "../index";
 
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../../globelStyle";
