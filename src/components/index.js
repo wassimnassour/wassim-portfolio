@@ -11,6 +11,7 @@ import Blog from "./landing/blog/blog";
 import Posts from "./blogPage/posts/posts";
 import AboutPage from "./aboutPage/about";
 import ContactPage from "./contactPage/contact";
+import SideBar from "./sideBar/sideBar";
 export {
   Header,
   Footer,
@@ -25,4 +26,5 @@ export {
   Posts,
   AboutPage,
   ContactPage,
+  SideBar,
 };

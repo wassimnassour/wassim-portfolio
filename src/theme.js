@@ -2,6 +2,7 @@ export const darkTheme = {
   color__white: "#EEE",
   color__gray: "#6c757d",
   color__gray__dark: "#464646",
+
   color__primary__2: "#007bff",
   color__primary: "#0274dc",
   color__background: "#222222",
@@ -11,11 +12,11 @@ export const darkTheme = {
   color__svg: "#2b2b2bba",
 
   // breakpoint
-  breakpoint_xs: 0,
-  breakpoint_sm: "576px",
-  breakpoint_md: "768px",
-  breakpoint_lg: "992px",
-  breakpoint_xl: "1200px",
+  breakpoint_M: "460px",
+  breakpoint_T: "776px",
+  breakpoint_L: "1000px",
+  breakpoint_D: "1200px",
+
   shadow: " 0 5px 15px rgba(0, 0, 0, 0.3)",
 };
 
@@ -33,10 +34,9 @@ export const lightTheme = {
   color__sub__text: "#6b6b6b",
 
   // breakpoint
-  breakpoint_xs: 0,
-  breakpoint_sm: "576px",
-  breakpoint_md: "768px",
-  breakpoint_lg: "992px",
-  breakpoint_xl: "1200px",
+  breakpoint_M: "460px",
+  breakpoint_T: "776px",
+  breakpoint_L: "1000px",
+  breakpoint_D: "1200px",
   shadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
 };

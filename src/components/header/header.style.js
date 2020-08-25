@@ -36,9 +36,12 @@ export const LogoWrapper = styled.div`
   }
 `;
 export const NavLinksWrapper = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+    display: none;
+  }
   display: flex;
   align-items: center;
-  height: 6rem;
+  height: 5rem;
   ul {
     display: flex;
     align-items: center;
