@@ -9,7 +9,7 @@ import {
   ThemeButton,
   NavBarWrapper,
 } from "./header.style";
-import { FaRegSun } from "react-icons/fa";
+import { FaRegSun, FaMoon } from "react-icons/fa";
 import { globalHistory } from "@reach/router";
 import { pageLinks } from "../../constants/links";
 
@@ -50,7 +50,7 @@ const Header = ({ theme, toggleTheme }) => {
         <NavLinksWrapper>
           <ul>{linkTemplet}</ul>
           <ThemeButton className="button" onClick={toggleTheme}>
-            <FaRegSun />
+            {theme === "light" ? <FaMoon /> : <FaRegSun />}
           </ThemeButton>
         </NavLinksWrapper>
       </NavBarWrapper>

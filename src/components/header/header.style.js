@@ -55,33 +55,23 @@ export const NavLinksWrapper = styled.div`
 
 export const A = styled(Link)`
   text-decoration: none;
-  /* color: ${({ path, fixed, theme }) =>
-    path && fixed
-      ? theme.color__text
-      : path
-      ? theme.color__white
-      : theme.color__text}; */
-      color:${({ theme }) => theme.color__text};
+
+  color: ${({ theme }) => theme.color__text};
   font-size: 1.6rem;
   font-weight: 400;
-
 `;
 
 export const ThemeButton = styled.button`
   background: transparent;
   border: none;
-  /* color: ${({ path, fixed, theme }) =>
-    path && fixed
-      ? theme.color__text
-      : path
-      ? theme.color__white
-      : theme.color__text}; */
-      color:${({ theme }) => theme.color__text};
 
-  font-size: 4.3rem;
+  color: ${({ theme }) => theme.color__text};
+
+  font-size: 4rem;
 
   display: flex;
   height: 3rem;
   align-items: center;
   outline: none;
+  transform: rotateZ(-16deg);
 `;
