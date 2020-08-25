@@ -17,7 +17,9 @@ export const HeaderContainer = styled.section`
     margin-bottom: 0.5rem;
     color: ${({ theme }) => theme.color__text};
     display: inline-block;
+  
   }
+
   h2 {
     font-size: 1rem;
     letter-spacing: 0.1rem;

@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const { BLOCKS, MARKS, INLINES } = require("@contentful/rich-text-types");
 module.exports = {
   plugins: [
     {

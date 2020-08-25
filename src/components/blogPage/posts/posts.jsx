@@ -7,14 +7,15 @@ const Posts = () => {
     {
       allContentfulBlogPost {
         nodes {
-          title
-          slug
           image {
             fluid {
-              src
+              ...GatsbyContentfulFluid
             }
+            title
           }
-          descrption: childContentfulBlogPostDescrption1TextNode {
+          slug
+          title
+          descrption1 {
             descrption1
           }
         }
@@ -24,6 +25,7 @@ const Posts = () => {
   const {
     allContentfulBlogPost: { nodes: posts },
   } = data;
+
   console.log(posts);
 
   return (
@@ -31,11 +33,11 @@ const Posts = () => {
       <BlogSectionWrapper>
         {posts.map(post => (
           <PostWrapper>
-            <Link to={`blog/${post.slug}`}>
+            <Link to={post.slug}>
               <Img fluid={post.image.fluid} />
               <div className="box-text">
                 <h1>{post.title}</h1>
-                <p>{post.descrption.descrption1}</p>
+                <p>{post.descrption1.descrption1}</p>
               </div>
             </Link>
           </PostWrapper>

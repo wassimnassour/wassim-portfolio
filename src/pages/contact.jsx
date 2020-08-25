@@ -1,8 +1,13 @@
 import React from "react";
-import { Layout } from "../components/index";
-
+import { Layout, ContactPage } from "../components/index";
+import { BigTitle } from "../components/utilityStyle";
 const Contact = () => {
-  return <Layout> Hello from Contact</Layout>;
+  return (
+    <Layout>
+      <BigTitle>Contact</BigTitle>
+      <ContactPage />
+    </Layout>
+  );
 };
 
 export default Contact;

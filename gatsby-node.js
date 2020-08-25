@@ -4,17 +4,27 @@ exports.createPages = async ({ graphql, actions }) => {
   const Resualt = await graphql(`
     {
       allContentfulBlogPost {
-        nodes {
-          slug
+        edges {
+          node {
+            slug
+            title
+          }
         }
       }
     }
   `);
-  Resualt.data.allContentfulBlogPost.nodes.forEach(node => {
+
+  const posts = Resualt.data.allContentfulBlogPost.edges;
+  posts.forEach(({ node }, index) => {
     createPage({
       path: `blog/${node.slug}`,
-      component: path.resolve(`src/templete/blog/blog.js`),
-      context: { slug: node.slug },
+      component: path.resolve(`src/templete/blog/post.jsx`),
+      context: {
+        slug: node.slug,
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === posts.length - 1 ? null : posts[index + 1].node,
+        a: posts,
+      },
     });
   });
 };

@@ -9,11 +9,17 @@ import {
   ThemeButton,
   NavBarWrapper,
 } from "./header.style";
-import { FaRegSun } from "react-icons/fa";
+import { FaRegSun, FaMoon } from "react-icons/fa";
 import { globalHistory } from "@reach/router";
 import { pageLinks } from "../../constants/links";
+import { SideBar } from "../index";
 
 const Header = ({ theme, toggleTheme }) => {
+  const [open, setOpen] = useState(false);
+  const togglebutton = () => {
+    setOpen(!open);
+  };
+
   const [fixed, setFixed] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", setHeaderFixed);
@@ -47,12 +53,19 @@ const Header = ({ theme, toggleTheme }) => {
             <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
           </A>
         </LogoWrapper>
+
         <NavLinksWrapper>
           <ul>{linkTemplet}</ul>
           <ThemeButton className="button" onClick={toggleTheme}>
-            <FaRegSun />
+            {theme === "light" ? <FaMoon /> : <FaRegSun />}
           </ThemeButton>
         </NavLinksWrapper>
+        <SideBar
+          togglebutton={togglebutton}
+          open={open}
+          theme={theme}
+          toggleTheme={toggleTheme}
+        />
       </NavBarWrapper>
     </NavBarContainer>
   );
