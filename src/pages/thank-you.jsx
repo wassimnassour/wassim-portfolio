@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components/index";
-
+import { graphql } from "gatsby";
 import styled from "styled-components";
 
 const ThankYou = ({ data }) => {
@@ -17,7 +17,6 @@ const ThankYou = ({ data }) => {
     h1{
     	padding: 2rem;
     	letter-spacing:1px;
-    	
     	font-size:2.15rem;
     }
 }`;

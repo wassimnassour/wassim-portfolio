@@ -71,6 +71,7 @@ export const Button = styled.div`
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		right: 0;
 		margin-right: 1rem;
+		top: 1.2rem;
 		${({ open }) =>
 			open && {
 				right: "60%",

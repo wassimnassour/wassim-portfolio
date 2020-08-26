@@ -69,6 +69,8 @@ export const ProjectWrapper = styled.div`
   }
   //media queries form Mobile
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
-    width: 80%;
+    .project {
+      flex-basis: 80%;
+    }
   }
 `;

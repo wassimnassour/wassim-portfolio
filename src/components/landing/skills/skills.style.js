@@ -55,7 +55,7 @@ export const SkillsContainer = styled.section`
       justify-content: center;
     }
     .skill {
-      width: 274px;
+      flex-basis: 80%;
 
       margin: 1rem;
       box-shadow: 0px 0 2px 0px #929292;
