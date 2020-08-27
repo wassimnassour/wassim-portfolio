@@ -24,7 +24,7 @@ export const useDarkMode = () => {
     } else {
       setMode("dark");
     }
-  }, []);
+  }, [theme]);
 
   return [theme, toggleTheme];
 };
