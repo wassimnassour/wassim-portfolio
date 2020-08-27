@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const NavBarContainer = styled.header`
-  margin-bottom: 1rem;
   position: sticky;
   top: 0;
   width: 100%;
   padding: 0.5rem;
-  box-shadow: ${({ fixed }) => fixed && "rgba(0, 0, 0, 0.2) 2px 0px 20px 0px"};
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
   background: ${({ theme, fixed }) => (fixed ? theme.color__background : "")};
   z-index: 100;
   a {

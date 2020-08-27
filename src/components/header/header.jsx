@@ -72,7 +72,3 @@ const Header = ({ theme, toggleTheme }) => {
 };
 
 export default Header;
-
-// const NavBar = ({  location, history }) => {
-
-// export default NavBar;
