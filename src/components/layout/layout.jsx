@@ -9,6 +9,7 @@ import { lightTheme, darkTheme } from "../../theme";
 const Layout = ({ children }) => {
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
+  console.log(themeMode);
 
   return (
     <ThemeProvider theme={themeMode}>
