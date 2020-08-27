@@ -19,11 +19,13 @@ const AboutPage = () => {
     <AboutPageContainer>
       <AboutPageWrapper>
         <div className="about__content">
-          <Image
-            fluid={IamgeLaptop.file.childImageSharp.fluid}
-            alt=""
-            objectFit="cover"
-          />
+          <div className="image-wrapper">
+            <Image
+              fluid={IamgeLaptop.file.childImageSharp.fluid}
+              alt=""
+              objectFit="cover"
+            />
+          </div>
           <p>
             {" "}
             Hi my name is <span className="important__word">Wassim </span>,am 21
