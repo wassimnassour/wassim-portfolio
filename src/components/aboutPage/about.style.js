@@ -59,4 +59,26 @@ export const AboutPageWrapper = styled.article`
       }
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+    width: 90%;
+    margin: 0 auto;
+
+    .about__content {
+      margin: 2rem 0;
+      .gatsby-image-wrapper {
+        width: 260px;
+        height: 260px;
+      }
+      p {
+        width: 86%;
+      }
+    }
+    .about__contact {
+      text-align: center;
+      margin: 3rem 0 0;
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
 `;

@@ -27,8 +27,8 @@ const Project = () => {
       <ProjectWrapper>
         {GithubData
           ? GithubData.map(repo => (
-              <a href={repo.html_url} key={repo.id}>
-                <div className="project">
+              <div className="project" key={repo.id}>
+                <a href={repo.html_url}>
                   <h1>{repo.name}</h1>
                   <div className="about-project">
                     <div className="infos">
@@ -50,8 +50,8 @@ const Project = () => {
                       )}
                     </span>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             ))
           : "loading"}
       </ProjectWrapper>
