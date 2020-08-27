@@ -36,6 +36,35 @@ export const ContactPageContainer = styled.div`
       font-weight: 600;
     }
   }
+  /*Laptop Version*/
+  @media (max-width: ${({ theme }) => theme.breakpoint_L}) {
+    .section1 {
+      width: 320px;
+      margin-right: 2rem;
+    }
+  }
+  /*Tablet Version*/
+  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+    margin: 4rem 0 0;
+    .section1 {
+      width: 60%;
+      margin: 2rem 0;
+    }
+  }
+  /*mobile Version*/
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    .section1 {
+      width: 77%;
+      margin: 2rem 0;
+    }
+  }
+  /*Small Mobile */
+  @media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
+    .section1 {
+      width: 86%;
+      margin: 2rem 0;
+    }
+  }
 `;
 export const FormContainer = styled.div`
   width: 455px;
@@ -44,6 +73,19 @@ export const FormContainer = styled.div`
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint_L}) {
+    width: 410px;
+  }
+  /* Mobile Version */
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    width: 84%;
+    margin: 2rem 0;
+  }
+  /*Small Mobile */
+  @media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
+    width: 86%;
+    margin: 2rem 0;
   }
 `;
 export const Form = styled.form`
@@ -106,11 +148,13 @@ export const Form = styled.form`
     box-shadow: 0 4px 10px -8px rgba(0, 0, 0, 0.78);
     border: 1px solid #6c757d;
     font-size: 1.5rem;
-    font-family: inherit;
+ 
+        font-weight: 600;
+            width: 46%;
     ::placeholder {
       color: ${({ theme }) => theme.color__gray};
     }
-    width: 219px;
+
     :hover {
       color: white;
       transform: scale(1.02) translateY(-0.1rem);
@@ -118,4 +162,5 @@ export const Form = styled.form`
       background: ${({ theme }) => theme.color__primary__2};
     }
   }
+ 
 `;

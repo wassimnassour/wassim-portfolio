@@ -12,6 +12,7 @@ export const darkTheme = {
   color__svg: "#2b2b2bba",
 
   // breakpoint
+  breakpoint_Mobile_xs: "350px",
   breakpoint_M: "500px",
   breakpoint_T: "800px",
   breakpoint_L: "1200px",
