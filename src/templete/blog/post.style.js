@@ -13,9 +13,7 @@ export const PostWrapper = styled.article`
 	.gatsby-image-wrapper {
 		max-height: 600px;
 	}
-	h1 {
 	
-	}
 	.buttons {
 		display: flex;
 		justify-content: space-between;
@@ -52,6 +50,16 @@ export const PostWrapper = styled.article`
 			}
 		}
 	}
+	 @media  (max-width: ${({ theme }) => theme.breakpoint_L}) {
+	 	width:80%;
+	 }
+	  @media  (max-width: ${({ theme }) => theme.breakpoint_M}) {
+	 	width:86%;
+	 	.title{
+	 		    font-size: 2.8rem;
+	 		    margin-bottom:2.5rem;
+	 	}
+	 }
 `;
 
 export const H1 = styled.h1`
