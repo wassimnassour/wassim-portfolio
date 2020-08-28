@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SkillsContainer = styled.section`
   height: auto;
 
-  margin: 3.5rem 0;
+  margin: 3.5rem 0 6rem;
 
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ export const SkillsContainer = styled.section`
       align-items: center;
       padding: 1rem;
       height: 241px;
-      box-shadow: 0 0 2px grey;
+      width: 33%;
       margin: 1rem;
       h2 {
         font-size: 1.6rem;
@@ -42,8 +42,8 @@ export const SkillsContainer = styled.section`
       justify-content: center;
     }
     .skill {
-      width: 196px;
-
+      width: 30%;
+      box-shadow: 0 0 2px grey;
       margin: 1rem;
       box-shadow: 0px 0 2px 0px #929292;
     }
@@ -56,6 +56,7 @@ export const SkillsContainer = styled.section`
     }
     .skill {
       flex-basis: 80%;
+      box-shadow: 0 0 2px grey;
 
       margin: 1rem;
       box-shadow: 0px 0 2px 0px #929292;

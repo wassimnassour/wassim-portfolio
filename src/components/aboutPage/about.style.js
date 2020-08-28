@@ -59,6 +59,8 @@ export const AboutPageWrapper = styled.article`
       }
     }
   }
+
+  /*Tablet version*/
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
     width: 90%;
     margin: 0 auto;
@@ -79,6 +81,16 @@ export const AboutPageWrapper = styled.article`
       h1 {
         font-size: 1.8rem;
       }
+    }
+  }
+  /*Tablet version*/
+  @media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
+    .gatsby-image-wrapper {
+      width: 189px;
+      height: 189px;
+    }
+    p {
+      width: 76%;
     }
   }
 `;
