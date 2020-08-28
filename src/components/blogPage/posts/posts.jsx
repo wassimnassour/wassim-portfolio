@@ -26,8 +26,6 @@ const Posts = () => {
     allContentfulBlogPost: { nodes: posts },
   } = data;
 
-  console.log(posts);
-
   return (
     <PostContainer>
       <BlogSectionWrapper>
