@@ -55,7 +55,11 @@ const Project = () => {
             ))
           : "loading"}
       </ProjectWrapper>
-      <CustomButton color="black" content="See more" url="/project" />
+      <CustomButton
+        color="black"
+        content="See more"
+        url="https://github.com/wassimnassour"
+      />
     </ProjectSectionContainer>
   );
 };

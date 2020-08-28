@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.section`
-  width: 72%;
+  width: 64%;
   margin: 1rem auto;
   // justify-content: center;
   align-items: center;

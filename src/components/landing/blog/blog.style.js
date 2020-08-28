@@ -29,6 +29,7 @@ export const Article = styled.article`
 	font-weight: 600;
 	box-shadow: 0 0 2px grey;
 	overflow: hidden;
+	max-height: 360px;
 	h1 {
 		font-size: 1.7rem;
 		font-weight: 600;

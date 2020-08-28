@@ -4,7 +4,7 @@ import styled from "styled-components";
 const MainContainer = styled.main`
 	max-width: 1200px;
 	margin: 0 auto;
-	min-height: 76vh;
+	min-height: 78vh;
 
 	margin-bottom: 6rem;
 `;

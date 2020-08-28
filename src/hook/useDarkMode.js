@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 export const useDarkMode = () => {
-  const isBrowser = () => typeof window !== "undefined";
-
-  const themelock = isBrowser() && window.localStorage.getItem("theme");
-  const [theme, setTheme] = useState(themelock || "dark");
+  const [theme, setTheme] = useState();
   const setMode = mode => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
@@ -24,7 +21,7 @@ export const useDarkMode = () => {
     } else {
       setMode("dark");
     }
-  }, []);
+  }, [theme]);
 
   return [theme, toggleTheme];
 };
