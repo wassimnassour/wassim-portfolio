@@ -22,7 +22,7 @@ const AboutPage = () => {
           <div className="image-wrapper">
             <Image
               fluid={IamgeLaptop.file.childImageSharp.fluid}
-              alt=""
+              alt="author-image"
               objectFit="cover"
             />
           </div>
