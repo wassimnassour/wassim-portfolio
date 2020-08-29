@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "../components/index";
+import { Layout, Seo } from "../components/index";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 
@@ -23,6 +23,7 @@ const ThankYou = ({ data }) => {
 	console.log(data);
 	return (
 		<Layout>
+			<Seo title="thank-you" description="after  succes contact page " />
 			<SuccesContainer>
 				<img src={data.file.publicURL} />
 				<h1>

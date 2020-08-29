@@ -38,7 +38,7 @@ const Blog = () => {
         {Articles.map(Element => (
           <Article>
             <Link to={`blog/${Element.slug}`}>
-              <Img fluid={Element.image.fluid} />
+              <Img fluid={Element.image.fluid} alt={Element.title} />
 
               <h1>{Element.title} </h1>
             </Link>

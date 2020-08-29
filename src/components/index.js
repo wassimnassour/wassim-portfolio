@@ -12,6 +12,7 @@ import Posts from "./blogPage/posts/posts";
 import AboutPage from "./aboutPage/about";
 import ContactPage from "./contactPage/contact";
 import SideBar from "./sideBar/sideBar";
+import Seo from "./seo/seo";
 export {
   Header,
   Footer,
@@ -27,4 +28,5 @@ export {
   AboutPage,
   ContactPage,
   SideBar,
+  Seo,
 };

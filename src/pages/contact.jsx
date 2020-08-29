@@ -1,13 +1,14 @@
 import React from "react";
-import { Layout, ContactPage } from "../components/index";
+import { Layout, ContactPage, Seo } from "../components/index";
 import { BigTitle } from "../components/utilityStyle";
 const Contact = () => {
-  return (
-    <Layout>
-      <BigTitle>Contact</BigTitle>
-      <ContactPage />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<Seo title=" Contact" description="Page For Contact Me" />
+			<BigTitle>Contact</BigTitle>
+			<ContactPage />
+		</Layout>
+	);
 };
 
 export default Contact;

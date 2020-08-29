@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { Layout } from "../components/index";
+import { Layout, Seo } from "../components/index";
 
 const PageNotFound = styled.div`
 	display: flex;
@@ -37,6 +37,7 @@ const PageNotFound = styled.div`
 const Erorre = ({ data }) => {
 	return (
 		<Layout>
+			<Seo title="404" description="Page not Found" />
 			<PageNotFound>
 				<img src={data.file.publicURL} alt="Page Not Found" />
 				<h2>Page Not Found </h2>
