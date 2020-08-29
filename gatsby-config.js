@@ -6,7 +6,6 @@ const { BLOCKS, MARKS, INLINES } = require("@contentful/rich-text-types");
 module.exports = {
   siteMetadata: {
     title: "wassimnassour",
-    titleTemplate: "wassimnassour",
     author: "wassimnassour",
     description: "This Site Made With Love And React Gatsby ",
     url: "http://wassimnassour.netlify.app/",
@@ -15,6 +14,30 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Wassim Nassour Portfolio`,
+        short_name: `Wassim`,
+        description: `The application does cool things and makes your life better.`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `src/images/logo.png`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#fff`,
+        localize: [
+          {
+            start_url: `/de/`,
+            lang: `de`,
+            name: `Die coole Anwendung`,
+            short_name: `Coole Anwendung`,
+            description: `Die Anwendung macht coole Dinge und macht Ihr Leben besser.`,
+          },
+        ],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
