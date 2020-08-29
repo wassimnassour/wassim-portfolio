@@ -4,6 +4,16 @@ require("dotenv").config({
 
 const { BLOCKS, MARKS, INLINES } = require("@contentful/rich-text-types");
 module.exports = {
+  siteMetadata: {
+    title: "wassimnassour",
+    titleTemplate: "wassimnassour",
+    author: "wassimnassour",
+    description: "This Site Made With Love And React Gatsby ",
+    url: "http://wassimnassour.netlify.app/",
+    image: "/images/snape.jpg",
+    twitterUsername: "@wassimnassour",
+  },
+
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,

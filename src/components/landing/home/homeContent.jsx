@@ -30,7 +30,13 @@ const HomeContent = () => {
             Back-end , and i love solving problems
           </span>
           <ButtonWrapper>
-            <CustomButton content={"Resume"} url={"resume"} color="blue" />
+            <CustomButton
+              content={"Resume"}
+              url={
+                "https://docs.google.com/document/d/1P_G4KWxPri4qvIWfmUrNlU99z2R0nPuOWnq04-2PqgE/"
+              }
+              color="blue"
+            />
             <CustomButton
               content={"Contact me"}
               url={"contact"}

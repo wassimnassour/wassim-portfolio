@@ -5,11 +5,13 @@ import {
   Skills,
   Project,
   Blog,
+  Seo,
 } from "../components/index";
 
 export default function Home() {
   return (
     <Layout>
+      <Seo title="Home" />
       <HomeContent />
       <Skills />
       <Project />

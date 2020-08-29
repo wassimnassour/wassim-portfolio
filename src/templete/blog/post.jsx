@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import { Layout } from "../../components/index";
+import { Layout, Seo } from "../../components/index";
 import { PostWrapper, H1, H2, H3, H4, P, Li } from "./post.style";
 import Img from "gatsby-image";
 import { FaAngleDoubleRight } from "react-icons/fa";
@@ -23,6 +23,10 @@ const Blog = ({ data, pageContext }) => {
 
 	return (
 		<Layout>
+			<Seo
+				title={data.post.title}
+				description={data.post.descrption1.descrption1}
+			/>
 			<PostWrapper>
 				<h1 className="title">{data.post.title}</h1>
 				<Img
@@ -55,6 +59,9 @@ export const query = graphql`
 	query getPost($slug: String) {
 		post: contentfulBlogPost(slug: { eq: $slug }) {
 			createdAt
+			descrption1 {
+				descrption1
+			}
 			image {
 				fluid {
 					...GatsbyContentfulFluid
