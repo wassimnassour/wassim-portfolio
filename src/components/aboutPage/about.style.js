@@ -15,6 +15,11 @@ export const AboutPageWrapper = styled.article`
     flex-wrap: wrap;
     height: auto;
     margin: 2rem auto 5rem;
+    a {
+      text-decoration: underline;
+
+      letter-spacing: 1px;
+    }
 
     .gatsby-image-wrapper {
       width: 350px;
