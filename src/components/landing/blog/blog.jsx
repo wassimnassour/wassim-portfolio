@@ -10,6 +10,7 @@ const Blog = () => {
     {
       allContentfulBlogPost(limit: 3) {
         nodes {
+          id
           title
           slug
           descrption1 {
@@ -36,7 +37,7 @@ const Blog = () => {
       <Title>Latest post</Title>
       <BlogWrapper>
         {Articles.map(Element => (
-          <Article>
+          <Article key={Element.id}>
             <Link to={`blog/${Element.slug}`}>
               <Img fluid={Element.image.fluid} alt={Element.title} />
 

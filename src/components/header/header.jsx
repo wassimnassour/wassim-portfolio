@@ -10,7 +10,7 @@ import {
   NavBarWrapper,
 } from "./header.style";
 import { FaRegSun, FaMoon } from "react-icons/fa";
-import { globalHistory } from "@reach/router";
+
 import { pageLinks } from "../../constants/links";
 import { SideBar } from "../index";
 
@@ -36,17 +36,15 @@ const Header = ({ theme, toggleTheme }) => {
     }
   };
 
-  const path = globalHistory.location.pathname === "/" ? true : false;
-
   const linkTemplet = pageLinks.map(link => (
-    <li key={link.id} path={path ? 1 : 0} fixed={fixed ? 1 : 0}>
-      <A to={link.url} activeClassName="active" path={path ? 1 : 0}>
+    <li key={link.id}>
+      <A to={link.url} activeClassName="active">
         {link.text}
       </A>
     </li>
   ));
   return (
-    <NavBarContainer fixed={fixed ? 1 : 0} path={path ? 1 : 0}>
+    <NavBarContainer fixed={fixed ? 1 : 0}>
       <NavBarWrapper fixed={fixed ? 1 : 0}>
         <LogoWrapper>
           <A to="/">

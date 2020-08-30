@@ -7,6 +7,7 @@ const Posts = () => {
     {
       allContentfulBlogPost {
         nodes {
+          id
           image {
             fluid {
               ...GatsbyContentfulFluid
@@ -30,7 +31,7 @@ const Posts = () => {
     <PostContainer>
       <BlogSectionWrapper>
         {posts.map(post => (
-          <PostWrapper>
+          <PostWrapper key={post.id}>
             <Link to={post.slug}>
               <Img fluid={post.image.fluid} />
               <div className="box-text">

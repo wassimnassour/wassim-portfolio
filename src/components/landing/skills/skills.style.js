@@ -15,6 +15,7 @@ export const SkillsContainer = styled.section`
     margin: 0 2rem;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
     .skill {
       display: flex;
       flex-direction: column;

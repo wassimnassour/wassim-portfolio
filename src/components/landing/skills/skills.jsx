@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Title, CustomButton } from "../../index";
+import { Title } from "../../index";
 import { SkillsContainer } from "./skills.style";
 const Skills = () => {
   const data = useStaticQuery(graphql`
