@@ -91,3 +91,6 @@ export const Li = styled.li`
 	padding-left: 0;
 	list-style: disc;
 `;
+export const Code = styled.p`
+	background: red;
+`;

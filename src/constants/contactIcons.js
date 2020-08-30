@@ -28,14 +28,14 @@ export const data = [
     icon: <FaGithub className="icon" />,
     name: "Github",
 
-    url: "www.facebook.com/wassimnassour",
+    url: "https://github.com/wassimnassour",
     text: "wassimnassour",
   },
   {
     id: 5,
     icon: <FaTwitter className="icon" />,
     name: "Twitter",
-    url: "www.facebook.com/wassimnassour",
+    url: "https://twitter.com/WassimNassour",
     text: "wassimnassour",
   },
 ];
