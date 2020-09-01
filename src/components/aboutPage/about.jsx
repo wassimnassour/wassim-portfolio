@@ -33,7 +33,7 @@ const AboutPage = () => {
             <span className="important__word">
               self-taught front-end developer
             </span>{" "}
-            and code lover and someone ambition to learn new stuff and the
+            and code lover and semeone ambition to learn new stuff and the
             amazing things i learn all the technologies by my self i spent a lot
             of time learning and making stuff .
             <br /> You can know more about me and tech i use by reading my
