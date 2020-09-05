@@ -1,92 +1,92 @@
 import styled from "styled-components";
 
 export const ContactPageContainer = styled.div`
-  height: auto;
-  flex-wrap: wrap;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 8rem 0 0;
-  .section1 {
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 3rem 0.6rem 0;
+	height: auto;
+	flex-wrap: wrap;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin: 8rem 0 0;
+	.section1 {
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		margin: 3rem 3rem 0.6rem 0;
 
-    justify-content: flex-start;
+		justify-content: flex-start;
 
-    .box-wrapper {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 8rem;
-      border: 1px solid #6c757d;
-      margin: 0 0.4rem 1.2rem;
-    }
+		.box-wrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: 8rem;
+			border: 1px solid #6c757d;
+			margin: 0 0.4rem 1.2rem;
+		}
 
-    .icon {
-      color: ${({ theme }) => theme.color__primary};
-      font-size: 4rem;
-      margin-right: 1rem;
-      padding: 2rem;
-    }
-    .text {
-      color: ${({ theme }) => theme.color__text};
-      font-size: 2rem;
-      font-weight: 600;
-    }
-  }
-  /*Laptop Version*/
-  @media (max-width: ${({ theme }) => theme.breakpoint_L}) {
-    .section1 {
-      width: 320px;
-      margin-right: 2rem;
-    }
-  }
-  /*Tablet Version*/
-  @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-    margin: 4rem 0 0;
-    .section1 {
-      width: 60%;
-      margin: 2rem 0;
-    }
-  }
-  /*mobile Version*/
-  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
-    .section1 {
-      width: 77%;
-      margin: 2rem 0;
-    }
-  }
-  /*Small Mobile */
-  @media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
-    .section1 {
-      width: 86%;
-      margin: 2rem 0;
-    }
-  }
+		.icon {
+			color: ${({ theme }) => theme.color__primary};
+			font-size: 4rem;
+			margin-right: 1rem;
+			padding: 2rem;
+		}
+		.text {
+			color: ${({ theme }) => theme.color__text};
+			font-size: 2rem;
+			font-weight: 600;
+		}
+	}
+	/*Laptop Version*/
+	@media (max-width: ${({ theme }) => theme.breakpoint_L}) {
+		.section1 {
+			width: 320px;
+			margin-right: 2rem;
+		}
+	}
+	/*Tablet Version*/
+	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+		margin: 4rem 0 0;
+		.section1 {
+			width: 60%;
+			margin: 2rem 0;
+		}
+	}
+	/*mobile Version*/
+	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+		.section1 {
+			width: 77%;
+			margin: 2rem 0;
+		}
+	}
+	/*Small Mobile */
+	@media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
+		.section1 {
+			width: 86%;
+			margin: 2rem 0;
+		}
+	}
 `;
 export const FormContainer = styled.div`
-  width: 455px;
+	width: 455px;
 
-  h2 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint_L}) {
-    width: 410px;
-  }
-  /* Mobile Version */
-  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
-    width: 84%;
-    margin: 2rem 0;
-  }
-  /*Small Mobile */
-  @media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
-    width: 86%;
-    margin: 2rem 0;
-  }
+	h2 {
+		font-size: 2rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	@media (max-width: ${({ theme }) => theme.breakpoint_L}) {
+		width: 410px;
+	}
+	/* Mobile Version */
+	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+		width: 84%;
+		margin: 2rem 0;
+	}
+	/*Small Mobile */
+	@media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
+		width: 86%;
+		margin: 2rem 0;
+	}
 `;
 export const Form = styled.form`
   display: flex;
@@ -135,6 +135,7 @@ export const Form = styled.form`
     font-size: 1.5rem;
     font-family: inherit;
     height: 320px;
+    resize:none;
     ::placeholder {
       color: ${({ theme }) => theme.color__gray};
     }
