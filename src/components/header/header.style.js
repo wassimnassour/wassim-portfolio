@@ -30,8 +30,42 @@ export const NavBarWrapper = styled.div`
 export const LogoWrapper = styled.div`
   font-size: 1.5rem;
   height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    color: ${({ theme, fixed }) => theme.color__text};
+    font-size: 2.3rem;
+  }
+  .letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 300px;
+    background: ${({ theme, fixed }) => theme.color__primary__2};
+    color: white;
+    margin-right: 7px;
+    font-weight: bold;
+    font-size: 2.8rem;
+  }
+
+  margin-left: 2rem;
+
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-    padding-left: 1.4rem;
+    margin-left: 1rem;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    margin-left: 0.4rem;
+    span {
+      font-size: 2rem;
+    }
+    .letter {
+      width: 44px;
+      height: 44px;
+      font-size: 2.5rem;
+    }
   }
 `;
 export const NavLinksWrapper = styled.div`

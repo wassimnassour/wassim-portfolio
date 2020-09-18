@@ -4,6 +4,10 @@ export const SideBarContainer = styled.div`
 	@media (min-width: ${({ theme }) => theme.breakpoint_T}) {
 		display: none;
 	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 	ul {
 		margin: 7rem 0;
 		text-align: center;
@@ -47,18 +51,16 @@ export const SideBarContainer = styled.div`
 	}
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
 	z-index: 66;
 	margin-right: 2rem;
 	border: none;
-	font-size: 2rem;
 	position: absolute;
-	top: 2rem;
-	right: 1rem;
-
+	right: 0;
+	background: none;
+	font-size: 4.2rem;
 	.svg {
 		font-size: 2.8rem;
-		margin-top: 0.7rem;
 		color: ${({ theme }) => theme.color__text};
 	}
 
@@ -67,11 +69,11 @@ export const Button = styled.div`
 			transition: " .3s all",
 			transform: "rotateZ(360deg)",
 			right: "33%",
+			top: "2rem",
 		}};
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		right: 0;
 		margin-right: 1rem;
-		top: 1.2rem;
 		${({ open }) =>
 			open && {
 				right: "60%",

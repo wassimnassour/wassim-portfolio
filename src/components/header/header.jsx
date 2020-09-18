@@ -47,9 +47,8 @@ const Header = ({ theme, toggleTheme }) => {
     <NavBarContainer fixed={fixed ? 1 : 0}>
       <NavBarWrapper fixed={fixed ? 1 : 0}>
         <LogoWrapper>
-          <A to="/">
-            <img src={theme === "light" ? LogoWhite : LogoDark} alt="logo" />
-          </A>
+          <span className="letter">W</span>
+          <span>Wassim Nassour</span>
         </LogoWrapper>
 
         <NavLinksWrapper>
