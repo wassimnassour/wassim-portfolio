@@ -1,59 +1,77 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { FaRegStar, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { DiJavascript1 } from "react-icons/di";
 import { Title } from "../../utilityStyle";
 import { ProjectSectionContainer, ProjectWrapper } from "./project.style";
-
 import { CustomButton } from "../../index";
-import { FaRegStar } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
-import { AiOutlineFork } from "react-icons/ai";
 
 const Project = () => {
-  const [GithubData, setGithubData] = useState("");
-  useEffect(() => {
-    //fetch repos from github
-    async function fetchData() {
-      const res = await fetch(
-        "https://api.github.com/users/wassimnassour/repos"
-      );
-      const data = await res.json();
-      setGithubData(data);
+  const data = useStaticQuery(graphql`
+    {
+      githubData {
+        data {
+          user {
+            repositories {
+              edges {
+                node {
+                  homepageUrl
+                  name
+                  primaryLanguage {
+                    name
+                  }
+                  stargazers {
+                    totalCount
+                  }
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    fetchData();
-  }, []);
+  `);
+  const {
+    githubData: {
+      data: {
+        user: {
+          repositories: { edges },
+        },
+      },
+    },
+  } = data;
 
   return (
     <ProjectSectionContainer>
       <Title> Projects</Title>
       <ProjectWrapper>
-        {GithubData
-          ? GithubData.map(repo => (
-              <div className="project" key={repo.id}>
-                <a href={repo.html_url}>
-                  <h1>{repo.name}</h1>
-                  <div className="about-project">
-                    <div className="infos">
-                      {" "}
-                      <span>
-                        {repo.stargazers_count}
-                        <FaRegStar />
-                      </span>
-                      <span>
-                        {repo.forks}
-                        <AiOutlineFork />
-                      </span>
-                    </div>
-                    <span className="language">
-                      {repo.language === "JavaScript" ? (
-                        <DiJavascript1 />
-                      ) : (
-                        "not"
-                      )}
-                    </span>
-                  </div>
+        {edges.map(({ node }) => {
+          console.log(node);
+          return (
+            <div className="project" key={node.id}>
+              <h1>{node.name}</h1>
+              <div className="about-project">
+                <div className="infos">
+                  {" "}
+                  <span>
+                    {node.stargazers.totalCount}
+                    <FaRegStar />
+                  </span>
+                </div>
+
+                <a href={node.url}>
+                  <FaGithub />
                 </a>
+                {node.homepageUrl ? (
+                  <a href={node.homepageUrl}>
+                    <FaExternalLinkAlt />
+                  </a>
+                ) : null}
               </div>
-            ))
-          : "loading"}
+            </div>
+          );
+        })}
       </ProjectWrapper>
       <CustomButton
         color="black"

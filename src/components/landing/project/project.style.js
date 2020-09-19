@@ -26,6 +26,14 @@ export const ProjectWrapper = styled.div`
     transition: all 0.4s;
     margin: 1.2rem;
     width: 280px;
+    position: relative;
+    .links {
+      display: flex;
+      a {
+        margin: 1rem;
+        font-size: 3rem;
+      }
+    }
     &:hover {
       box-shadow: 0 0 3px grey;
     }
@@ -35,8 +43,15 @@ export const ProjectWrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 3rem 1rem 0rem;
       height: 12%;
+      position: absolute;
+      bottom: 5%;
+      width: 88%;
+      transform: translateX(-50%);
+      left: 50%;
+      a {
+        font-size: 3.5rem;
+      }
     }
   }
   h1 {
@@ -49,14 +64,12 @@ export const ProjectWrapper = styled.div`
   }
 
   span {
-    font-size: 2rem;
-    margin: 0.5rem;
+    font-size: 2.5rem;
   }
   .language {
     font-size: 2rem;
     color: yellow;
-    margin: 0 2.4rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   //media queries form Tablete
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
