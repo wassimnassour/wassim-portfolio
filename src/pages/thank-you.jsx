@@ -5,30 +5,38 @@ import styled from "styled-components";
 
 const ThankYou = ({ data }) => {
 	const SuccesContainer = styled.div`
-	 display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    vertical-align: middle;
-    text-align: center;
-    height: 66vh;
-    margin: auto 0;
-    h1{
-    	padding: 2rem;
-    	letter-spacing:1px;
-    	font-size:2.15rem;
-    }
-}`;
-	console.log(data);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: auto;
+		vertical-align: middle;
+		text-align: center;
+		height: 66vh;
+		margin: auto 0;
+		h1 {
+			padding: 2rem;
+			letter-spacing: 1px;
+			font-size: 2.15rem;
+		}
+		.Love {
+			font-size: 2.5rem;
+		}
+	`;
 	return (
 		<Layout>
 			<Seo title="thank-you" description="after  succes contact page " />
 			<SuccesContainer>
-				<img src={data.file.publicURL} />
+				<img src={data.file.publicURL} alt="thank you" />
 				<h1>
 					Thank you for getting in touch
-					<span alt="image for love"> &#128151;</span>.
+					<span alt="image for love">
+						{" "}
+						<span className="Love" role="img" aria-label="emoji">
+							&#128151;
+						</span>
+					</span>
+					.
 					<br />i would like to thank you for writing to me.
 					<br /> i will reply by email as soon as possible.
 				</h1>
@@ -36,6 +44,7 @@ const ThankYou = ({ data }) => {
 		</Layout>
 	);
 };
+
 export const query = graphql`
 	{
 		file(relativePath: { eq: "succes.svg" }) {

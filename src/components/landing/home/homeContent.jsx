@@ -1,8 +1,20 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { CustomButton } from "../../index";
-import { HeaderContainer, ButtonWrapper } from "./homeContent.style";
+import {
+  HeaderContainer,
+  ButtonWrapper,
+  ResumeButton,
+} from "./homeContent.style";
 
 const HomeContent = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(extension: { eq: "pdf" }) {
+        publicURL
+      }
+    }
+  `);
   return (
     <HeaderContainer>
       <div className="svg">
@@ -29,13 +41,9 @@ const HomeContent = () => {
             Back-end , and i love solving problems
           </span>
           <ButtonWrapper>
-            <CustomButton
-              content={"Resume"}
-              url={
-                "https://docs.google.com/document/d/1P_G4KWxPri4qvIWfmUrNlU99z2R0nPuOWnq04-2PqgE/"
-              }
-              color="blue"
-            />
+            <ResumeButton href={data.file.publicURL} download>
+              Resume
+            </ResumeButton>
             <CustomButton
               content={"Contact me"}
               url={"contact"}

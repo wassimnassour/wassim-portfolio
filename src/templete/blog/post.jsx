@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { Layout, Seo } from "../../components/index";
-import { PostWrapper, H1, H2, H3, H4, P, Li, Code } from "./post.style";
+import { PostWrapper, H1, H2, H3, H4, P, Li } from "./post.style";
 import Img from "gatsby-image";
 import { FaAngleDoubleRight } from "react-icons/fa";
 const Blog = ({ data, pageContext }) => {

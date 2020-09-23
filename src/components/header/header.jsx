@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import LogoDark from "../../images/LogoDark.svg";
-import LogoWhite from "../../images/LogoWhite.svg";
+import { Link } from "gatsby";
+import { FaRegSun, FaMoon } from "react-icons/fa";
+
 import {
   NavBarContainer,
   LogoWrapper,
@@ -9,7 +10,6 @@ import {
   ThemeButton,
   NavBarWrapper,
 } from "./header.style";
-import { FaRegSun, FaMoon } from "react-icons/fa";
 
 import { pageLinks } from "../../constants/links";
 import { SideBar } from "../index";
@@ -47,8 +47,10 @@ const Header = ({ theme, toggleTheme }) => {
     <NavBarContainer fixed={fixed ? 1 : 0}>
       <NavBarWrapper fixed={fixed ? 1 : 0}>
         <LogoWrapper>
-          <span className="letter">W</span>
-          <span>Wassim Nassour</span>
+          <Link to="/">
+            <span className="letter">W</span>
+            <span>Wassim Nassour</span>
+          </Link>
         </LogoWrapper>
 
         <NavLinksWrapper>

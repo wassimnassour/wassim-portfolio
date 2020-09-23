@@ -46,7 +46,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/static/`,
       },
     },
 
@@ -90,11 +90,11 @@ module.exports = {
       repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC} privacy: PUBLIC, isFork: false) {
         edges {
           node {
+            id
             primaryLanguage {
             name
-          }
-                        homepageUrl
-
+            }
+            homepageUrl
             name
             url
             stargazers {
