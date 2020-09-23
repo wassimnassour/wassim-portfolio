@@ -15,7 +15,6 @@ const HomeContent = () => {
       }
     }
   `);
-  console.log(data);
   return (
     <HeaderContainer>
       <div className="svg">

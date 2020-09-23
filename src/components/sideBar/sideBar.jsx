@@ -21,7 +21,7 @@ const SideBar = ({ open, togglebutton, theme, toggleTheme }) => {
 					<div className="SideBar">
 						<ul>
 							{pageLinks.map(link => (
-								<Link to={link.url}>
+								<Link to={link.url} key={link.id}>
 									<li>{link.text}</li>
 								</Link>
 							))}

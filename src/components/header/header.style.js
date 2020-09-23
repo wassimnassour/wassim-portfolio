@@ -30,12 +30,15 @@ export const NavBarWrapper = styled.div`
 export const LogoWrapper = styled.div`
   font-size: 1.5rem;
   height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   span {
     color: ${({ theme, fixed }) => theme.color__text};
     font-size: 2.3rem;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .letter {
     display: flex;

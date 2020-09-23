@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { FaRegStar, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
 import { Title } from "../../utilityStyle";
 import { ProjectSectionContainer, ProjectWrapper } from "./project.style";
 import { CustomButton } from "../../index";
@@ -15,6 +14,7 @@ const Project = () => {
             repositories {
               edges {
                 node {
+                  id
                   homepageUrl
                   name
                   primaryLanguage {
@@ -47,7 +47,6 @@ const Project = () => {
       <Title> Projects</Title>
       <ProjectWrapper>
         {edges.map(({ node }) => {
-          console.log(node);
           return (
             <div className="project" key={node.id}>
               <h1>{node.name}</h1>
