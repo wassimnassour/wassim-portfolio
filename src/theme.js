@@ -12,8 +12,8 @@ export const darkTheme = {
   color__svg: "#2b2b2bba",
 
   // breakpoint
-  breakpoint_Mobile_xs: "350px",
-  breakpoint_M: "500px",
+  breakpoint_Mobile_xs: "378px",
+  breakpoint_M: "550px",
   breakpoint_T: "800px",
   breakpoint_L: "1200px",
   breakpoint_D: "1600px",
@@ -35,7 +35,8 @@ export const lightTheme = {
   color__sub__text: "#6b6b6b",
 
   // breakpoint
-  breakpoint_M: "500px",
+  breakpoint_Mobile_xs: "378px",
+  breakpoint_M: "550px",
   breakpoint_T: "800px",
   breakpoint_L: "1200px",
   breakpoint_D: "1600px",
