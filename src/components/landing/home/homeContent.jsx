@@ -14,7 +14,7 @@ const HomeContent = () => {
           <h1>Wassim Nassour</h1>
 
           <span>
-            Hi my name is wassim ,
+            Hi my name is wassim
             <br />
             am self-taught front-end developer also have basic Knowledge in
             Back-end , and i love solving problems
