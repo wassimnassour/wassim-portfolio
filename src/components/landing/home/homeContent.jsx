@@ -1,5 +1,4 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { CustomButton } from "../../index";
 import {
   HeaderContainer,
@@ -8,13 +7,6 @@ import {
 } from "./homeContent.style";
 
 const HomeContent = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(extension: { eq: "pdf" }) {
-        publicURL
-      }
-    }
-  `);
   return (
     <HeaderContainer>
       <div className="svg">
@@ -36,12 +28,13 @@ const HomeContent = () => {
           <h1>Wassim Nassour</h1>
 
           <span>
-            Hi my name is wassim ,<br />
-            am self-taught front-end developer also have basic knowldeg in
+            Hi my name is wassim ,
+            <br />
+            am self-taught front-end developer also have basic Knowledge in
             Back-end , and i love solving problems
           </span>
           <ButtonWrapper>
-            <ResumeButton href={data.file.publicURL} download>
+            <ResumeButton href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing">
               Resume
             </ResumeButton>
             <CustomButton
