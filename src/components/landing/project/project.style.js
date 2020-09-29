@@ -15,7 +15,7 @@ export const ProjectSectionContainer = styled.section`
 export const ProjectWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 94%;
+  width: 98%;
   margin-bottom: 2rem;
 
   .project {
@@ -25,7 +25,7 @@ export const ProjectWrapper = styled.div`
     box-shadow: 0 0 2px grey;
     transition: all 0.4s;
     margin: 1.2rem;
-    width: 280px;
+    width: 31%;
     position: relative;
     .links {
       display: flex;
@@ -66,18 +66,14 @@ export const ProjectWrapper = styled.div`
   span {
     font-size: 2.5rem;
   }
-  .language {
-    font-size: 2rem;
-    color: yellow;
-    font-size: 3.5rem;
-  }
+
   //media queries form Tablete
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
     flex-wrap: wrap;
     justify-content: center;
     .project {
-      height: 200px;
-      width: 196px;
+      height: 250px;
+      flex-basis: 33%;
     }
   }
   //media queries form Mobile
