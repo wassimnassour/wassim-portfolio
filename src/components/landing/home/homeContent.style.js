@@ -94,6 +94,7 @@ export const HeaderContainer = styled.section`
       padding: 0 0 0 1.5rem;
       h1 {
         font-size: 3.7rem;
+        letter-spacing: 1px;
       }
     }
     a {

@@ -59,6 +59,7 @@ export const Button = styled.button`
 	right: 0;
 	background: none;
 	font-size: 4.2rem;
+	outline: none;
 	.svg {
 		font-size: 2.8rem;
 		color: ${({ theme }) => theme.color__text};
