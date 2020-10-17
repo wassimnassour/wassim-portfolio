@@ -23,7 +23,6 @@ export const AboutPageWrapper = styled.article`
 
     .gatsby-image-wrapper {
       width: 350px;
-      margin: 2rem 6rem;
       height: 350px;
       border-radius: 350px;
       border: 5px solid ${({ theme }) => theme.color__primary};
@@ -35,10 +34,11 @@ export const AboutPageWrapper = styled.article`
     }
 
     p {
-      width: 450px;
       text-align: center;
       font-size: 1.7rem;
       font-weight: 500;
+      width: 80%;
+      line-height: 29px;
     }
   }
 
