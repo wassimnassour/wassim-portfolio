@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "gatsby-image";
 import { contactInfo } from "../../constants/contactIcons";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { AboutPageContainer, AboutPageWrapper } from "./about.style";
 const AboutPage = () => {
   const IamgeLaptop = useStaticQuery(graphql`
@@ -28,19 +28,27 @@ const AboutPage = () => {
           </div>
           <p>
             {" "}
-            Hi my name is <span className="important__word">Wassim </span>,am 21
-            years old from morocco live in Casablanca , and i’m{" "}
+            Hi, my name is <span className="important__word">Wassim</span>, am
+            21 years old from morocco live in Casablanca, and I’m
             <span className="important__word">
-              self-taught front-end developer
+              a self-taught front-end developer
             </span>{" "}
-            and code lover and semeone ambition to learn new stuff and the
-            amazing things i learn all the technologies by my self i spent a lot
-            of time learning and making stuff .
-            <br /> You can know more about me and tech i use by reading my
-            aricles
-            <Link className="important__word" to="/blog">
-              see more
-            </Link>
+            , I'm passionate about Tech and someone ambition to learn new stuff
+            and the amazing things , i learn all the technologies by my self i
+            spent a lot of time learning and making stuff. also skilled at
+            writing well-designed tastable, and efficient code using current
+            best practices in web development also proficient in translating
+            designs into high-quality code, and write applications using React
+            and javascript and Gatsby,
+            <br />
+            You can know more about me and tech i use by reading my{" "}
+            <a
+              className="important__word"
+              href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing"
+            >
+              Resume
+            </a>
+            .
           </p>
         </div>
         <div className="about__contact">
