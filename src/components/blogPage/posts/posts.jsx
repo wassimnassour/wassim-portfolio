@@ -3,34 +3,10 @@ import Img from "gatsby-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { PostContainer, BlogSectionWrapper, PostWrapper } from "./posts.style";
 const Posts = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allContentfulBlogPost {
-        nodes {
-          id
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-            title
-          }
-          slug
-          title
-          descrption1 {
-            descrption1
-          }
-        }
-      }
-    }
-  `);
-  const {
-    allContentfulBlogPost: { nodes: posts },
-  } = data;
-
   return (
     <PostContainer>
       <BlogSectionWrapper>
-        {posts.map(post => (
+        {/* {posts.map(post => (
           <PostWrapper key={post.id}>
             <Link to={post.slug}>
               <Img fluid={post.image.fluid} />
@@ -40,7 +16,7 @@ const Posts = () => {
               </div>
             </Link>
           </PostWrapper>
-        ))}
+        ))} */}
       </BlogSectionWrapper>
     </PostContainer>
   );

@@ -2,7 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const { BLOCKS, MARKS, INLINES } = require("@contentful/rich-text-types");
 module.exports = {
   siteMetadata: {
     title: "wassimnassour",
@@ -61,15 +60,7 @@ module.exports = {
         display: "swap",
       },
     },
-    //add contentfull
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `k35f0etvf2j1`,
 
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
     {
       resolve: `gatsby-source-github-api`,
       options: {

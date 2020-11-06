@@ -14,8 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
-    "@contentful/rich-text-react-renderer": "^14.1.1",
     "axios": "^0.20.0",
     "babel-plugin-styled-components": "^1.11.1",
     "formik": "^2.1.5",
@@ -27,7 +25,6 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-plugin-styled-components": "^3.3.10",
-    "gatsby-source-contentful": "^2.3.37",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-source-github-api": "^0.2.1",
     "gatsby-transformer-sharp": "^2.5.12",
