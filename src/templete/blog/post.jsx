@@ -4,23 +4,23 @@ import { Layout, Seo } from "../../components/index";
 import { PostWrapper, H1, H2, H3, H4, P, Li } from "./post.style";
 import Img from "gatsby-image";
 import { FaAngleDoubleRight } from "react-icons/fa";
-const Blog = ({ data, pageContext }) => {
+const Blog = ({ pageContext }) => {
   // const { prev, next } = pageContext;
-
+  console.log("page", pageContext);
   return (
     <Layout>
-      <Seo
+      {/* <Seo
         title={data.post.title}
         description={data.post.descrption1.descrption1}
-      />
+      /> */}
       <PostWrapper>
-        <h1 className="title">{data.post.title}</h1>
+        {/* <h1 className="title">{data.post.title}</h1>
         <Img
           fluid={data.post.image.fluid}
           objectFit="contain"
           objectPosition="50% 50%"
         />
-        {/* <div className="buttons">
+        <div className="buttons">
 					{prev && (
 						<Link to={`/blog/${prev.slug}`} className="left">
 							{" "}
