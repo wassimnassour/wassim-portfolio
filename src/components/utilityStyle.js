@@ -11,4 +11,5 @@ export const BigTitle = styled.h1`
   background: ${({ theme }) => theme.color__svg};
   padding: 2rem;
   color: ${({ theme }) => theme.color__text};
+  text-align: center;
 `;

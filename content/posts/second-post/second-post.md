@@ -1,11 +1,10 @@
 ---
-title: My first blog post
-slug: My-first-blog-post
-date: 2020-11-21
+title: second blog post
+slug: second-blog-post
+date: 2018-01-21
 author: Danilo Woznica
 featured: true
-image: ./my-image.jpeg
-category:
+category: rolo.png
   - News
 
   - Events

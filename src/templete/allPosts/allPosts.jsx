@@ -1,11 +1,34 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { Layout } from "../../components/index";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import {
+  PostContainer,
+  BlogSectionWrapper,
+  PostWrapper,
+} from "./allPosts.style";
+import { Layout  , BigTitle} from "../../components/index";
 const AllPosts = ({ data }) => {
-  console.log(data);
+  const {
+    allMarkdownRemark: { nodes: posts },
+  } = data;
+  console.log(posts);
   return (
     <Layout>
-      <div></div>
+     <BigTitle>Blog</BigTitle>
+        <BlogSectionWrapper>
+    
+          {posts.map(post => (
+            <PostWrapper key={post.id}>
+              <Link to={post.frontmatter.slug}>
+                  <Img fluid={post.frontmatter.image.childImageSharp.fluid}  />
+                <div className="box-text">
+                  <h1>{post.frontmatter.title}</h1>
+                   <p>{post.excerpt}...</p>
+                </div>
+              </Link>
+            </PostWrapper>
+          ))}
+        </BlogSectionWrapper>
     </Layout>
   );
 };
@@ -18,15 +41,21 @@ export const query = graphql`
       limit: $limit
       skip: $skip
     ) {
-      edges {
-        node {
-          frontmatter {
-            slug
-            title
+      nodes {
+        id
+          excerpt(pruneLength: 200)
+      frontmatter {
+        image {
+          childImageSharp {
+            fluid {
+           ...GatsbyImageSharpFluid
+            }
           }
-          id
         }
+        slug
+        title
       }
+    }
     }
   }
 `;
