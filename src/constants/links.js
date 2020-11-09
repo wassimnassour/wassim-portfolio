@@ -12,7 +12,7 @@ export const pageLinks = [
   {
     id: 4,
     text: "Blog",
-    url: "/blog/",
+    url: "/blog/1",
   },
   {
     id: 5,

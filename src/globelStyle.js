@@ -27,4 +27,9 @@ export const GlobalStyle = createGlobalStyle`
     ul{
       padding-left:0;
     }
+    .hydrated {
+      font-size:1.7rem;
+      padding:1rem;
+      
+    }
   }`;
