@@ -12,6 +12,7 @@ import AboutPage from "./aboutPage/about";
 import ContactPage from "./contactPage/contact";
 import SideBar from "./sideBar/sideBar";
 import Seo from "./seo/seo";
+import Pagination from "../components/pagination/pagination";
 export {
   Header,
   Footer,
@@ -28,4 +29,5 @@ export {
   SideBar,
   Seo,
   BigTitle,
+  Pagination,
 };

@@ -2,7 +2,6 @@ export const darkTheme = {
   color__white: "#EEE",
   color__gray: "#6c757d",
   color__gray__dark: "#464646",
-
   color__primary__2: "#007bff",
   color__primary: "#0274dc",
   color__background: "#222222",

@@ -2,12 +2,11 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import { BlogSectionWrapper, PostWrapper } from "./allPosts.style";
-import { Layout, BigTitle } from "../../components/index";
-const AllPosts = ({ data }) => {
+import { Layout, BigTitle, Pagination } from "../../components/index";
+const AllPosts = ({ data, pageContext, ...as }) => {
   const {
     allMarkdownRemark: { nodes: posts },
   } = data;
-  console.log(posts);
   return (
     <Layout>
       <BigTitle>Blog</BigTitle>
@@ -23,6 +22,7 @@ const AllPosts = ({ data }) => {
             </Link>
           </PostWrapper>
         ))}
+        <Pagination pageContext={pageContext} />
       </BlogSectionWrapper>
     </Layout>
   );
