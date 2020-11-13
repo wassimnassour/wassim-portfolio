@@ -10,9 +10,10 @@ import {
   ThemeButton,
   NavBarWrapper,
 } from "./header.style";
-
 import { pageLinks } from "../../constants/links";
 import { SideBar } from "../index";
+import LogoWhite from "../../images/assets/logo-white.svg";
+import LogoDark from "../../images/assets/logo-dark.svg";
 
 const Header = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
@@ -47,10 +48,7 @@ const Header = ({ theme, toggleTheme }) => {
     <NavBarContainer fixed={fixed ? 1 : 0}>
       <NavBarWrapper fixed={fixed ? 1 : 0}>
         <LogoWrapper>
-          <Link to="/">
-            <span className="letter">W</span>
-            <span>Wassim Nassour</span>
-          </Link>
+          <Link to="/">{theme === "light" ? <LogoDark /> : <LogoWhite />}</Link>
         </LogoWrapper>
 
         <NavLinksWrapper>

@@ -30,29 +30,9 @@ export const NavBarWrapper = styled.div`
 export const LogoWrapper = styled.div`
   font-size: 1.5rem;
   height: 5rem;
-
-  span {
-    color: ${({ theme, fixed }) => theme.color__text};
-    font-size: 2.3rem;
-  }
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .letter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 300px;
-    background: ${({ theme, fixed }) => theme.color__primary__2};
-    color: white;
-    margin-right: 7px;
-    font-weight: bold;
-    font-size: 2.8rem;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   margin-left: 2rem;
 
@@ -61,14 +41,6 @@ export const LogoWrapper = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     margin-left: 0.4rem;
-    span {
-      font-size: 2rem;
-    }
-    .letter {
-      width: 44px;
-      height: 44px;
-      font-size: 2.5rem;
-    }
   }
 `;
 export const NavLinksWrapper = styled.div`
