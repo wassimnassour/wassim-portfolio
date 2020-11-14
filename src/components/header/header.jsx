@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FaRegSun, FaMoon } from "react-icons/fa";
 
@@ -12,31 +12,16 @@ import {
 } from "./header.style";
 import { pageLinks } from "../../constants/links";
 import { SideBar } from "../index";
+import { useFixed } from "../../hook/useFixed";
 import LogoWhite from "../../images/assets/logo-white.svg";
 import LogoDark from "../../images/assets/logo-dark.svg";
 
 const Header = ({ theme, toggleTheme }) => {
+  const { fixed } = useFixed();
   const [open, setOpen] = useState(false);
   const togglebutton = () => {
     setOpen(!open);
   };
-
-  const [fixed, setFixed] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", setHeaderFixed);
-
-    return () => {
-      window.removeEventListener("scroll", setHeaderFixed);
-    };
-  }, []);
-  const setHeaderFixed = () => {
-    if (window.scrollY >= 50) {
-      setFixed(true);
-    } else {
-      setFixed(false);
-    }
-  };
-
   const linkTemplet = pageLinks.map(link => (
     <li key={link.id}>
       <A to={link.url} activeClassName="active">
@@ -50,7 +35,6 @@ const Header = ({ theme, toggleTheme }) => {
         <LogoWrapper>
           <Link to="/">{theme === "light" ? <LogoDark /> : <LogoWhite />}</Link>
         </LogoWrapper>
-
         <NavLinksWrapper>
           <ul>{linkTemplet}</ul>
           <ThemeButton className="button" onClick={toggleTheme}>

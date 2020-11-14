@@ -13,6 +13,7 @@ import ContactPage from "./contactPage/contact";
 import SideBar from "./sideBar/sideBar";
 import Seo from "./seo/seo";
 import Pagination from "../components/pagination/pagination";
+import SocialMediaIcons from "./socialMediaIcons/socialMediaIcons";
 export {
   Header,
   Footer,
@@ -30,4 +31,5 @@ export {
   Seo,
   BigTitle,
   Pagination,
+  SocialMediaIcons,
 };
