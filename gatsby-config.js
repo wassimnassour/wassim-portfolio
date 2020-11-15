@@ -74,9 +74,11 @@ module.exports = {
         edges {
           node {
             id
+            description
             primaryLanguage {
             name
             }
+            forkCount
             homepageUrl
             name
             url
@@ -90,7 +92,7 @@ module.exports = {
     }
   }`,
         variables: {
-          userFirst: 3,
+          userFirst: 5,
           author: "wassimnassour",
         },
       },

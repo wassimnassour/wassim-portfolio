@@ -1,10 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { FaRegStar, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Title } from "../../utilityStyle";
 import { ProjectSectionContainer, ProjectWrapper } from "./project.style";
 import { CustomButton } from "../../index";
-
+import ProjectCard from "../projectCard/projectCard";
 const Project = () => {
   const data = useStaticQuery(graphql`
     {
@@ -15,7 +14,9 @@ const Project = () => {
               edges {
                 node {
                   id
+                  forkCount
                   homepageUrl
+                  description
                   name
                   primaryLanguage {
                     name
@@ -48,35 +49,26 @@ const Project = () => {
       <ProjectWrapper>
         {edges.map(({ node }) => {
           return (
-            <div className="project" key={node.id}>
-              <h1>{node.name}</h1>
-              <div className="about-project">
-                <div className="infos">
-                  {" "}
-                  <span>
-                    {node.stargazers.totalCount}
-                    <FaRegStar />
-                  </span>
-                </div>
-
-                <a href={node.url}>
-                  <FaGithub />
-                </a>
-                {node.homepageUrl ? (
-                  <a href={node.homepageUrl}>
-                    <FaExternalLinkAlt />
-                  </a>
-                ) : null}
-              </div>
-            </div>
+            <ProjectCard
+              key={node.id}
+              name={node.name}
+              url={node.homepageUrl}
+              githubUrl={node.url}
+              stars={node.stargazers.totalCount}
+              primaryLanguage={node.primaryLanguage.name}
+              forkCount={node.forkCount}
+              description={node.description}
+            />
           );
         })}
+        <div className="button">
+          <CustomButton
+            color="black"
+            content="See more"
+            url="https://github.com/wassimnassour"
+          />
+        </div>
       </ProjectWrapper>
-      <CustomButton
-        color="black"
-        content="See more"
-        url="https://github.com/wassimnassour"
-      />
     </ProjectSectionContainer>
   );
 };
