@@ -5,8 +5,7 @@ export const HeroContainer = styled.section`
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  height: 90vh;
-
+  height: 70vh;
   /* Mobile Version  */
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     height: 70vh;
@@ -14,7 +13,7 @@ export const HeroContainer = styled.section`
 `;
 
 export const ContentWrapper = styled.div`
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +37,7 @@ export const ContentWrapper = styled.div`
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.1rem;
     margin: 1.3rem 0;
     color: ${({ theme }) => theme.color__gray};
     text-align: left;
@@ -157,20 +156,20 @@ export const ResumeButton = styled.a`
 `;
 
 export const ContactList = styled.div`
-  ${({ fixed }) =>
-    fixed
-      ? { display: "none" }
-      : {
-          display: "flex",
-          justifyContent: "space-between",
-
-          width: "100%",
-        }}
+display:none;
+/*  ${({ fixed }) =>
+  fixed
+    ? { display: "none" }
+    : {
+        display: "flex",
+        justifyContent: "space-between",
+        width: "100%",
+      }}
 
   span {
     font-size: 1.6rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     display: none;
-  }
+  }*/
 `;

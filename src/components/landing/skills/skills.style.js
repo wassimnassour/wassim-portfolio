@@ -12,28 +12,10 @@ export const SkillsContainer = styled.section`
 
   .skills {
     display: flex;
-    margin: 0 2rem;
+    margin: 3rem 0;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
-    .skill {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      height: 241px;
-      width: 33%;
-      margin: 1rem;
-      h2 {
-        font-size: 1.6rem;
-        margin: 2rem;
-      }
-      img {
-        width: 73%;
-        height: 80%;
-      }
-    }
+    width: 100%;
   }
 
   //media queries form Tablete
@@ -42,25 +24,12 @@ export const SkillsContainer = styled.section`
       flex-wrap: wrap;
       justify-content: center;
     }
-    .skill {
-      width: 30%;
-      box-shadow: 0 0 2px grey;
-      margin: 1rem;
-      box-shadow: 0px 0 2px 0px #929292;
-    }
   }
   //media queries form Mobile
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     .skills {
       flex-wrap: wrap;
       justify-content: center;
-    }
-    .skill {
-      flex-basis: 80%;
-      box-shadow: 0 0 2px grey;
-
-      margin: 1rem;
-      box-shadow: 0px 0 2px 0px #929292;
     }
   }
 `;

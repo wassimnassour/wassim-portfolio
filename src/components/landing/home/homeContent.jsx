@@ -11,15 +11,14 @@ import {
 const HomeContent = () => {
   const { fixed } = useFixed();
   return (
-    <HeroContainer>
+    <HeroContainer fixed={fixed}>
       <ContentWrapper>
         <span className="job-title">Front-End Developer</span>
         <h1>Wassim Nassour</h1>
         <span>
-          I'm Self-taught front-end Developer, I'm passionate about Tech ,
-          skilled at writing well-designed tastable, and efficient code using
-          current best practices in web development also proficient in
-          translating .
+          I'm a Self-taught JavaScript Developer, proficient in Front-End, I'm
+          passionate about the Tech world, skilled at writing clean and readable
+          Code, by using current best practices in web development
         </span>
         <ButtonWrapper>
           <ResumeButton href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing">
