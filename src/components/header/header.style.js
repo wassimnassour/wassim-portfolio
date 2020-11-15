@@ -6,7 +6,8 @@ export const NavBarContainer = styled.header`
   top: 0;
   width: 100%;
   padding: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
+  box-shadow: ${({ theme, fixed }) =>
+    fixed && "rgba(0, 0, 0, 0.2) 2px 0px 20px 0px "};
   background: ${({ theme, fixed }) => (fixed ? theme.color__background : "")};
   z-index: 100;
   a {
@@ -19,7 +20,7 @@ export const NavBarWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  max-width: 1202px;
+  max-width: 1400px;
   color: ${({ theme }) => theme.color__white};
   display: flex;
   align-items: center;
@@ -33,7 +34,6 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-left: 2rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
@@ -55,7 +55,7 @@ export const NavLinksWrapper = styled.div`
     align-items: center;
     li {
       list-style: none;
-      margin: 1.3rem;
+      margin: 2rem;
       font-size: 1.5rem;
       .active {
         border-bottom: 2px solid ${({ theme }) => theme.color__primary};

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
-import { contactInfo } from "../../constants/contactIcons";
+import { contactIcons } from "../../constants/contactIcons";
 import { useStaticQuery, graphql } from "gatsby";
 import { AboutPageContainer, AboutPageWrapper } from "./about.style";
 const AboutPage = () => {
@@ -54,7 +54,7 @@ const AboutPage = () => {
         <div className="about__contact">
           <h2> You can find me here i will be very happy to speak to you </h2>
 
-          <ul>{contactInfo}</ul>
+          <ul>{contactIcons}</ul>
         </div>
       </AboutPageWrapper>
     </AboutPageContainer>

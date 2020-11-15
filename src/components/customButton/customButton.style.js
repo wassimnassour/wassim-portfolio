@@ -19,13 +19,13 @@ const cheeckColor = props => {
   return BlackButton;
 };
 export const ButtonWrapper = styled(Link)`
-  text-decoration: none;
+  text-decoration: finone;
   font-weight: 400;
   width: 175px;
   margin: 1rem;
   font-size: 1.5rem;
 
-  border-radius: 1.2rem;
+  border-radius: 0.6rem;
   padding: 1rem 1rem;
   margin-left: 0;
   display: flex;

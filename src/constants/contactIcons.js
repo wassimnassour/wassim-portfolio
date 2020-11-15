@@ -61,12 +61,12 @@ export const SocialLinks = data.map(link => (
   </SocialLink>
 ));
 
-export const contactInfo = (
+export const contactIcons = (
   <>
     {data.map(link => (
-      <li key={link.id}>
-        <a href={link.url}>{link.icon}</a>
-      </li>
+      <a href={link.url} key={link.id}>
+        {link.icon}
+      </a>
     ))}
   </>
 );

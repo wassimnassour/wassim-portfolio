@@ -7,7 +7,9 @@ export const AboutPageWrapper = styled.article`
   align-items: center;
 
   margin: 2rem auto 2rem;
-
+  svg {
+    margin: 1rem 2rem;
+  }
   .about__content {
     display: flex;
     justify-content: center;
