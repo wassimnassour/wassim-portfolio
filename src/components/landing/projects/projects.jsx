@@ -45,7 +45,7 @@ const Project = () => {
 
   return (
     <ProjectSectionContainer>
-      <Title> Projects</Title>
+      <Title> Open Source  Projects</Title>
       <ProjectWrapper>
         {edges.map(({ node }) => {
           return (
