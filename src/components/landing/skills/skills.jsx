@@ -1,41 +1,48 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { Title } from "../../index";
+import DesignIcon from "../../../images/assets/ui.svg";
+import FastLearnerIcon from "../../../images/assets/fastLearner.svg";
+import CodingIcon from "../../../images/assets/coding.svg";
+import SeoIcon from "../../../images/assets/seo.svg";
 import { SkillsContainer } from "./skills.style";
+import SkillCard from "../skillCard/skillCard";
 const Skills = () => {
-  const data = useStaticQuery(graphql`
+  const data = [
     {
-      problem: file(relativePath: { eq: "problemsolving.svg" }) {
-        name
-        publicURL
-      }
-      frontend: file(relativePath: { eq: "frontend.svg" }) {
-        name
-        publicURL
-      }
-      learning: file(relativePath: { eq: "learning.svg" }) {
-        name
-        publicURL
-      }
-    }
-  `);
-
+      name: "Front-End Develompent",
+      description:
+        "Build Front-End Applications using the latest Tools and Technologies with Best Practices",
+      Icon: CodingIcon,
+    },
+    {
+      name: "Ui Design",
+      description: "build Good looking user interfaces  ",
+      Icon: DesignIcon,
+    },
+    {
+      name: "Seo",
+      description:
+        "Build Fast and optimize Apps that's respect Search engine rules",
+      Icon: SeoIcon,
+    },
+    {
+      name: "Fast Learner",
+      description:
+        "being self-taught made me good at teaching my self by books, videos, docs, and solve my  problem",
+      Icon: FastLearnerIcon,
+    },
+  ];
   return (
     <SkillsContainer>
       <Title>Skills</Title>
       <div className="skills">
-        <div className="skill">
-          <img src={data.frontend.publicURL} alt={data.frontend.name} />
-          <h2>Frontend Developer</h2>
-        </div>
-        <div className="skill">
-          <img src={data.problem.publicURL} alt={data.problem.name} />
-          <h2>Problem Solving</h2>
-        </div>{" "}
-        <div className="skill">
-          <img src={data.learning.publicURL} alt={data.learning.name} />
-          <h2>Fast Learner</h2>
-        </div>
+        {data.map(_el => (
+          <SkillCard
+            name={_el.name}
+            description={_el.description}
+            Icon={_el.Icon}
+          />
+        ))}
       </div>
     </SkillsContainer>
   );
