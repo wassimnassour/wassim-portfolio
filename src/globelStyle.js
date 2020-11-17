@@ -32,4 +32,5 @@ export const GlobalStyle = createGlobalStyle`
       padding:1rem;
       
     }
+ 
   }`;

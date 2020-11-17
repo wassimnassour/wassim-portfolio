@@ -14,6 +14,7 @@ import SideBar from "./sideBar/sideBar";
 import Seo from "./seo/seo";
 import Pagination from "../components/pagination/pagination";
 import SocialMediaIcons from "./socialMediaIcons/socialMediaIcons";
+import Post from "./post/post";
 export {
   Header,
   Footer,
@@ -32,4 +33,5 @@ export {
   BigTitle,
   Pagination,
   SocialMediaIcons,
+  Post,
 };

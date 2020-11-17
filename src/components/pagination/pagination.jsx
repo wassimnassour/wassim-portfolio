@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { PagintionList } from "./pagination.style";
 const Pagination = ({ pageContext }) => {
-	console.log("pageContext", pageContext);
 	const { numPages } = pageContext;
 	return (
 		<PagintionList>

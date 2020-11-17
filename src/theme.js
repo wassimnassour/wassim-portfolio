@@ -4,11 +4,12 @@ export const darkTheme = {
   color__gray__dark: "#464646",
   color__primary__2: "#007bff",
   color__primary: "#0274dc",
-  color__background: "#222222",
+  color__background: "#191919",
   color__text: "#EEEE",
   color__sub__text: "#eee",
   color__footer: "#343a40",
   color__svg: "#2b2b2bba",
+  color__article: "#2b2a2a",
 
   // breakpoint
   breakpoint_Mobile_xs: "378px",
@@ -28,10 +29,11 @@ export const lightTheme = {
   color__footer: "#007bff",
   color__primary__2: "#007bff",
   color__primary: "#0274dc",
-  color__background: "#EEEEEE",
+  color__background: "#f7f7f7",
   color__text: "#343a40",
   color__gray__dark: "#464646",
   color__sub__text: "#6b6b6b",
+  color__article: "",
 
   // breakpoint
   breakpoint_Mobile_xs: "378px",

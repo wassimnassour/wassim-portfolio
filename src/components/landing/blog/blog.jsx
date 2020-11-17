@@ -39,13 +39,12 @@ const Blog = () => {
                 fluid={Article.frontmatter.image.childImageSharp.fluid}
                 alt={Article.frontmatter.title}
               />
-
               <h1>{Article.frontmatter.title} </h1>
             </Link>
           </Articles>
         ))}
       </BlogWrapper>
-      <CustomButton color="black" content="See more" url="/blog" />
+      <CustomButton color="black" content="See more" url="/blog/1" />
     </BlogContainer>
   );
 };
