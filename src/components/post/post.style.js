@@ -120,10 +120,10 @@ export const ImageWrapper = styled.div`
 	}
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		height: 58%;
+		height: 60%;
 	}
-	/*tablete Version */
-	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		height: 51 77%;
+	/*Mobile Version */
+	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+		height: 53%;
 	}
 `;
