@@ -6,12 +6,11 @@ export const NavBarContainer = styled.header`
   top: 0;
   width: 100%;
   padding: 0.5rem;
-  box-shadow: ${({ theme, fixed }) =>
-    fixed && "rgba(0, 0, 0, 0.2) 2px 0px 20px 0px "};
-  background: ${({ theme, fixed }) => (fixed ? theme.color__background : "")};
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
+  background: ${({ theme }) => theme.color__background};
   z-index: 100;
   a {
-    color: ${({ theme, fixed }) => (fixed ? theme.color__text : "")};
+    color: ${({ theme }) => theme.color__text};
   }
 `;
 export const Wrapper = styled.div``;
@@ -24,7 +23,7 @@ export const NavBarWrapper = styled.div`
   color: ${({ theme }) => theme.color__white};
   display: flex;
   align-items: center;
-  height: ${({ fixed }) => (fixed ? "7.2vh" : "7.4vh")};
+  height: 7.4vh;
   padding: 2rem 0;
 `;
 
