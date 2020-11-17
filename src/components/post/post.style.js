@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
 export const PostWrapper = styled.article`
-	font-size: 3rem;
-	height: 625px;
-	width: 100%;
+	height: auto;
+	${({ location }) =>
+		location === "homePage"
+			? {
+					fontSize: "1rem",
+					width: "31%",
+			  }
+			: {
+					fontSize: "3rem",
+					width: "100%",
+			  }}
+
 	margin: 4rem 0;
 	color: ${({ theme }) => theme.color__white};
 	border-radius: 0.8rem;
 	overflow: hidden;
+	align-self: flex-start;
 	background: ${({ theme }) => theme.color__article};
 	box-shadow: rgba(33, 33, 33, 0.14) 0px 0px 10px 0px;
 	&:hover {
@@ -16,24 +26,28 @@ export const PostWrapper = styled.article`
 	}
 
 	.box-text {
-		height: 27%;
+		height: ${({ location }) => (location === "homePage" ? "46%" : "27%")};
 		overflow: hidden;
 		padding: 1.3rem 1.3rem 0;
 		width: 100%;
+		padding-bottom: 0.8rem;
 		p {
-			font-size: 1.5rem;
+			font-size: ${({ location }) =>
+				location === "homePage" ? "1.4rem" : "1.5rem"};
 			color: ${({ theme }) => theme.color__gray};
 		}
 		h1 {
-			font-size: 2.35rem;
+			font-size: ${({ location }) =>
+				location === "homePage" ? "1.9rem" : "2.35rem"};
 			margin: 0.6rem 0;
 			color: ${({ theme }) => theme.color__text};
 		}
 	}
+
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		height: 520px;
-
+		width: 46%;
+		margin-left: 1.1rem;
 		.box-text {
 			display: flex;
 			flex-direction: column;
@@ -53,15 +67,14 @@ export const PostWrapper = styled.article`
 	/*mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		margin: 2.9rem 0;
-		height: 460px;
+		width: 75%;
 		.box-text {
-			height: unset;
 			height: 55%;
 			h1 {
 				font-size: 1.9rem;
 			}
 			p {
-				font-size: 1.3rem;
+				font-size: 1.5rem;
 				color: ${({ theme }) => theme.color__gray};
 				margin: 0.4rem 0;
 			}
@@ -85,7 +98,7 @@ export const Category = styled.li`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 1.5rem;
+		font-size: ${({ location }) => (location === "homePage" ? "1.3rem" : "1.5rem")};
 		font-weight: 600;
 		min-width: 67px;
 		padding: 0.4rem 1rem;
@@ -111,8 +124,8 @@ export const Category = styled.li`
 `;
 
 export const ImageWrapper = styled.div`
+	height: ${({ location }) => (location === "homePage" ? "50%" : "63%")};
 	width: 100%;
-	height: 63%;
 	.gatsby-image-wrapper {
 		height: 100%;
 		width: 100%;
@@ -120,10 +133,10 @@ export const ImageWrapper = styled.div`
 	}
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		height: 60%;
+		height: ${({ location }) => (location === "homePage" ? "50%" : "60%")};
 	}
 	/*Mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
-		height: 53%;
+		height: ${({ location }) => (location === "homePage" ? "50%" : "53%")};
 	}
 `;

@@ -1,9 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { BlogContainer, BlogWrapper, Articles } from "./blog.style";
+import { useStaticQuery, graphql } from "gatsby";
+import { BlogContainer, BlogWrapper } from "./blog.style";
 import { Title } from "../../utilityStyle";
-import Img from "gatsby-image";
-import { CustomButton } from "../../index";
+import { CustomButton, Post } from "../../index";
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -11,10 +10,13 @@ const Blog = () => {
       allMarkdownRemark(limit: 3) {
         nodes {
           id
+          excerpt(pruneLength: 200)
+
           frontmatter {
             slug
             title
             date
+            category
             image {
               childImageSharp {
                 fluid {
@@ -33,15 +35,15 @@ const Blog = () => {
       <Title>Latest post</Title>
       <BlogWrapper>
         {allMarkdownRemark.nodes.map(Article => (
-          <Articles key={Article.id}>
-            <Link to={`blog/${Article.frontmatter.slug}`}>
-              <Img
-                fluid={Article.frontmatter.image.childImageSharp.fluid}
-                alt={Article.frontmatter.title}
-              />
-              <h1>{Article.frontmatter.title} </h1>
-            </Link>
-          </Articles>
+          <Post
+            location="homePage"
+            key={Article.id}
+            image={Article.frontmatter.image.childImageSharp.fluid}
+            title={Article.frontmatter.title}
+            url={Article.frontmatter.slug}
+            description={Article.excerpt}
+            categories={Article.frontmatter.category}
+          />
         ))}
       </BlogWrapper>
       <CustomButton color="black" content="See more" url="/blog/1" />
