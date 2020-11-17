@@ -1,9 +1,8 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
-import { BlogSectionWrapper, PostWrapper } from "./allPosts.style";
-import { Layout, BigTitle, Pagination } from "../../components/index";
-const AllPosts = ({ data, pageContext, ...as }) => {
+import { graphql } from "gatsby";
+import { BlogSectionWrapper } from "./allPosts.style";
+import { Layout, BigTitle, Pagination, Post } from "../../components/index";
+const AllPosts = ({ data, pageContext }) => {
   const {
     allMarkdownRemark: { nodes: posts },
   } = data;
@@ -12,16 +11,16 @@ const AllPosts = ({ data, pageContext, ...as }) => {
       <BigTitle>Blog</BigTitle>
       <BlogSectionWrapper>
         {posts.map(post => (
-          <PostWrapper key={post.id}>
-            <Link to={`/blog/${post.frontmatter.slug}`}>
-              <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
-              <div className="box-text">
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.excerpt}...</p>
-              </div>
-            </Link>
-          </PostWrapper>
+          <Post
+            key={post.id}
+            link={post.frontmatter.slug}
+            image={post.frontmatter.image.childImageSharp.fluid}
+            title={post.frontmatter.title}
+            description={post.excerpt}
+            categories={post.frontmatter.category}
+          />
         ))}
+
         <Pagination pageContext={pageContext} />
       </BlogSectionWrapper>
     </Layout>
@@ -40,6 +39,7 @@ export const query = graphql`
         id
         excerpt(pruneLength: 200)
         frontmatter {
+          category
           image {
             childImageSharp {
               fluid {

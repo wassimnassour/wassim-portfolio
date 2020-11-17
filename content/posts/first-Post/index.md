@@ -4,6 +4,14 @@ slug: coming-Soon
 date: 2020-11-8
 featured: true
 image: home.png
+author: Wassim Nassour
+
+category:
+  - Events
+  - dev
+tags:
+  - Portugal
+  - Porto
 ---
 
 # Hello My Name is Wassim nassour

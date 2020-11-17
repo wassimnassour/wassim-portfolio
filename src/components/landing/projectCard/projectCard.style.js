@@ -15,7 +15,7 @@ justify-content: space-between;
 		font-size: 1.5rem;
 		font-weight: bold;
 		letter-spacing: 1px;
-		${({ primaryLanguage }) => (primaryLanguage === "JavaScript" ? { color: "yellow" } : "")}
+		${({ primaryLanguage }) => (primaryLanguage === "JavaScript" ? { color: "#c1c109" } : "")}
 	}
 	.project {
 		display: flex;
