@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PostWrapper = styled.article`
-	height: auto;
+	max-height: 574px;
 	${({ location }) =>
 		location === "homePage"
 			? {
@@ -17,7 +17,6 @@ export const PostWrapper = styled.article`
 	color: ${({ theme }) => theme.color__white};
 	border-radius: 0.8rem;
 	overflow: hidden;
-	align-self: flex-start;
 	background: ${({ theme }) => theme.color__article};
 	box-shadow: rgba(33, 33, 33, 0.14) 0px 0px 10px 0px;
 	&:hover {
@@ -26,11 +25,10 @@ export const PostWrapper = styled.article`
 	}
 
 	.box-text {
-		height: ${({ location }) => (location === "homePage" ? "46%" : "27%")};
+		height: ${({ location }) => (location === "homePage" ? "50%" : "27%")};
 		overflow: hidden;
 		padding: 1.3rem 1.3rem 0;
 		width: 100%;
-		padding-bottom: 0.8rem;
 		p {
 			font-size: ${({ location }) =>
 				location === "homePage" ? "1.4rem" : "1.5rem"};
@@ -43,11 +41,21 @@ export const PostWrapper = styled.article`
 			color: ${({ theme }) => theme.color__text};
 		}
 	}
+	//small laptop
 
+	@media (max-width: ${({ theme }) => theme.breakpoint_L}) {
+		.box-text {
+			height: 56%;
+		}
+	}
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		width: 46%;
-		margin-left: 1.1rem;
+		${({ location }) =>
+			location === "homePage" && {
+				width: "44%",
+				maxHeight: "602px",
+			}}
+		margin:1.3rem;
 		.box-text {
 			display: flex;
 			flex-direction: column;
@@ -67,14 +75,20 @@ export const PostWrapper = styled.article`
 	/*mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		margin: 2.9rem 0;
-		width: 75%;
+		max-height: 500px;
+
+		${({ location }) =>
+			location === "homePage" && {
+				width: "85%",
+			}}
+
 		.box-text {
 			height: 55%;
 			h1 {
 				font-size: 1.9rem;
 			}
 			p {
-				font-size: 1.5rem;
+				font-size: 1.4rem;
 				color: ${({ theme }) => theme.color__gray};
 				margin: 0.4rem 0;
 			}
@@ -133,7 +147,7 @@ export const ImageWrapper = styled.div`
 	}
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-		height: ${({ location }) => (location === "homePage" ? "50%" : "60%")};
+		height: ${({ location }) => (location === "homePage" ? "45%" : "60%")};
 	}
 	/*Mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {

@@ -27,6 +27,7 @@ export const BlogWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     flex-wrap: wrap;
     justify-content: center;
+
     article:last-child {
       margin: 1.5rem;
     }

@@ -40,7 +40,7 @@ const Blog = () => {
             key={Article.id}
             image={Article.frontmatter.image.childImageSharp.fluid}
             title={Article.frontmatter.title}
-            url={Article.frontmatter.slug}
+            link={Article.frontmatter.slug}
             description={Article.excerpt}
             categories={Article.frontmatter.category}
           />
