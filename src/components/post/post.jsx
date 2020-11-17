@@ -3,19 +3,27 @@ import kebabCase from "lodash.kebabcase";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 import { PostWrapper, Categories, Category, ImageWrapper } from "./post.style";
-const Post = ({ image, categories, description, link, id, title }) => {
+const Post = ({
+	image,
+	categories,
+	description,
+	link,
+	id,
+	title,
+	location,
+}) => {
 	return (
-		<PostWrapper key={id}>
-			<ImageWrapper>
+		<PostWrapper key={id} location={location}>
+			<ImageWrapper location={location}>
 				<Link to={`/blog/${link}`}>
 					<Img fluid={image} />
 				</Link>
 			</ImageWrapper>
 
 			{categories && (
-				<Categories>
+				<Categories location={location}>
 					{categories.map(category => (
-						<Category category={category} key={category}>
+						<Category location={location} category={category} key={category}>
 							<Link
 								to={`/blog/category/${kebabCase(category)}`}
 								className="category_link"
