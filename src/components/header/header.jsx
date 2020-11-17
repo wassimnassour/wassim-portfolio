@@ -12,12 +12,10 @@ import {
 } from "./header.style";
 import { pageLinks } from "../../constants/links";
 import { SideBar } from "../index";
-import { useFixed } from "../../hook/useFixed";
 import LogoWhite from "../../images/assets/logo-white.svg";
 import LogoDark from "../../images/assets/logo-dark.svg";
 
 const Header = ({ theme, toggleTheme }) => {
-  const { fixed } = useFixed();
   const [open, setOpen] = useState(false);
   const togglebutton = () => {
     setOpen(!open);
@@ -30,8 +28,8 @@ const Header = ({ theme, toggleTheme }) => {
     </li>
   ));
   return (
-    <NavBarContainer fixed={fixed ? 1 : 0}>
-      <NavBarWrapper fixed={fixed ? 1 : 0}>
+    <NavBarContainer>
+      <NavBarWrapper>
         <LogoWrapper>
           <Link to="/">{theme === "light" ? <LogoDark /> : <LogoWhite />}</Link>
         </LogoWrapper>
