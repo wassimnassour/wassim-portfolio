@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PostWrapper = styled.article`
-	max-height: 574px;
+	max-height: auto;
 	${({ location }) =>
 		location === "homePage"
 			? {
