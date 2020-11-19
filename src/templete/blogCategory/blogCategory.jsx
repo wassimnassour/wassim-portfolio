@@ -19,6 +19,8 @@ const BlogCategory = ({ pageContext, data }) => {
 							description={node.excerpt}
 							categories={node.frontmatter.category}
 							link={node.frontmatter.slug}
+							date={node.frontmatter.date}
+							author={node.frontmatter.author}
 						/>
 					);
 				})}
@@ -41,11 +43,13 @@ export const query = graphql`
 			edges {
 				node {
 					id
-					excerpt(pruneLength: 300)
+					excerpt(pruneLength: 200)
 
 					frontmatter {
 						title
 						slug
+						category
+						date
 						author
 						category
 						image {

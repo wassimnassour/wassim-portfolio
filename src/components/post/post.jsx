@@ -11,6 +11,8 @@ const Post = ({
 	id,
 	title,
 	location,
+	date,
+	author,
 }) => {
 	return (
 		<PostWrapper key={id} location={location}>
@@ -19,25 +21,27 @@ const Post = ({
 					<Img fluid={image} />
 				</Link>
 			</ImageWrapper>
-
-			{categories && (
-				<Categories location={location}>
-					{categories.map(category => (
-						<Category location={location} category={category} key={category}>
-							<Link
-								to={`/blog/category/${kebabCase(category)}`}
-								className="category_link"
-							>
-								{category}
-							</Link>
-						</Category>
-					))}
-				</Categories>
-			)}
 			<div className="box-text">
+				{categories && (
+					<Categories location={location}>
+						{categories.map(category => (
+							<Category location={location} category={category} key={category}>
+								<Link
+									to={`/blog/category/${kebabCase(category)}`}
+									className="category_link"
+								>
+									{category}
+								</Link>
+							</Category>
+						))}
+					</Categories>
+				)}
 				<Link to={`/blog/${link}`}>
 					<h1>{title}</h1>
 					<p>{description}...</p>
+					<p>
+						By {author} In {date}
+					</p>
 				</Link>
 			</div>
 		</PostWrapper>

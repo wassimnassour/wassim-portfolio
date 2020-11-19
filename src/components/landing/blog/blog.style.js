@@ -6,13 +6,12 @@ export const BlogContainer = styled.section`
   align-items: center;
   margin: 2rem 0;
   padding: 1rem;
-
   height: auto;
 `;
 export const BlogWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 96%;
   margin: 3.6rem auto;
 
   //media queries form Tablete
@@ -20,7 +19,7 @@ export const BlogWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     article:last-child {
-      margin: 1rem auto 0 2.3rem;
+      margin: 1rem auto 0 2.5rem;
     }
   }
   //media queries form Mobile
@@ -29,7 +28,8 @@ export const BlogWrapper = styled.div`
     justify-content: center;
 
     article:last-child {
-      margin: 1.5rem;
+      /*      margin: 1.5rem;
+*/
     }
   }
 `;

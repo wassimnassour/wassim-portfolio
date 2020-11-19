@@ -18,6 +18,8 @@ const AllPosts = ({ data, pageContext }) => {
             title={post.frontmatter.title}
             description={post.excerpt}
             categories={post.frontmatter.category}
+            date={post.frontmatter.date}
+            author={post.frontmatter.author}
           />
         ))}
 
@@ -40,6 +42,8 @@ export const query = graphql`
         excerpt(pruneLength: 200)
         frontmatter {
           category
+          date
+          author
           image {
             childImageSharp {
               fluid {

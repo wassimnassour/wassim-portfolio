@@ -16,6 +16,7 @@ const Blog = () => {
             slug
             title
             date
+            author
             category
             image {
               childImageSharp {
@@ -43,6 +44,8 @@ const Blog = () => {
             link={Article.frontmatter.slug}
             description={Article.excerpt}
             categories={Article.frontmatter.category}
+            date={Article.frontmatter.date}
+            author={Article.frontmatter.author}
           />
         ))}
       </BlogWrapper>
