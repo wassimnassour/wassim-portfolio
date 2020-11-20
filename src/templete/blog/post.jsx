@@ -1,7 +1,6 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { FaAngleDoubleRight } from "react-icons/fa";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import RehypeReact from "rehype-react";
 import { Layout, Seo } from "../../components/index";
@@ -22,7 +21,6 @@ const renderAst = new RehypeReact({
 }).Compiler;
 
 const Blog = ({ data, pageContext }) => {
-  const { prev, next } = pageContext;
   const { markdownRemark } = data;
   deckDeckGoHighlightElement();
 
@@ -41,21 +39,6 @@ const Blog = ({ data, pageContext }) => {
         />
 
         {renderAst(markdownRemark.htmlAst)}
-        <div className="buttons">
-          {prev && (
-            <Link to={`/blog/${prev.slug}`} className="left">
-              {" "}
-              <FaAngleDoubleRight className="left-icon" />
-              {prev.title}
-            </Link>
-          )}
-          <span className="line">|</span>
-          {next && (
-            <Link to={`/blog/${next.slug}`} className="right">
-              {next.title} <FaAngleDoubleRight className="right_icon" />
-            </Link>
-          )}
-        </div>
       </PostWrapper>
     </Layout>
   );

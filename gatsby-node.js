@@ -45,9 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templete/blog/post.jsx`),
       context: {
         slug: node.frontmatter.slug,
-        prev: index === 0 ? null : posts[index - 1].node.frontmatter,
-        next:
-          index === posts.length - 1 ? null : posts[index + 1].node.frontmatter,
       },
     });
   });
