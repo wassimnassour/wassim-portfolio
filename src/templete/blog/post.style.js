@@ -60,18 +60,16 @@ export const PostWrapper = styled.article`
 
 export const H1 = styled.h1`
   font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 2rem;
+  margin: 2rem 0;
 `;
 export const H2 = styled.h2`
   font-size: 2.3rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin: 2rem 0;
+;
 `;
 export const H3 = styled.h3`
   font-size: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin: 2rem 0;
 `;
 export const H4 = styled.h4`
   margin-top: 2rem;
@@ -82,8 +80,28 @@ export const P = styled.p`
   font-size: 1.6rem;
   letter-spacing: 0.3px;
   line-height: 2.7rem;
+
+  @media (max-width: ${({theme})=> theme.breakpoint_M}){
+font-size:1.4rem;
+  }
 `;
 export const Li = styled.li`
   padding-left: 0;
   list-style: disc;
+    font-size: 1.6rem;
+
+    @media (max-width: ${({theme})=> theme.breakpoint_M}){
+font-size:1.4rem;
+  }
 `;
+
+export const Strong = styled.strong`
+  font-size: inherit;
+  color:${({theme})=> theme.color__primary}
+`;
+
+export const A = styled.a`
+  font-size: inherit;
+  color:${({theme})=> theme.color__primary}
+`;
+
