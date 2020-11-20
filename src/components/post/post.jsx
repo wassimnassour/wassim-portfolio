@@ -2,7 +2,13 @@ import React from "react";
 import kebabCase from "lodash.kebabcase";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
-import { PostWrapper, Categories, Category, ImageWrapper } from "./post.style";
+import {
+	PostWrapper,
+	Categories,
+	Category,
+	ImageWrapper,
+	ContentBox,
+} from "./post.style";
 const Post = ({
 	image,
 	categories,
@@ -21,7 +27,7 @@ const Post = ({
 					<Img fluid={image} />
 				</Link>
 			</ImageWrapper>
-			<div className="box-text">
+			<ContentBox location={location}>
 				{categories && (
 					<Categories location={location}>
 						{categories.map(category => (
@@ -43,7 +49,7 @@ const Post = ({
 						By {author} In {date}
 					</p>
 				</Link>
-			</div>
+			</ContentBox>
 		</PostWrapper>
 	);
 };

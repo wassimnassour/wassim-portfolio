@@ -7,10 +7,14 @@ import { CustomButton, Post } from "../../index";
 const Blog = () => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(limit: 3 ,sort: { fields: [frontmatter___date], order: DESC } ,filter: {frontmatter: {featured: {eq: true}}}) {
+      allMarkdownRemark(
+        limit: 3
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { featured: { eq: true } } }
+      ) {
         nodes {
           id
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 170)
 
           frontmatter {
             slug

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BlogSectionWrapper = styled.div`
-  width: 60%;
+  width: 67%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -11,10 +11,10 @@ export const BlogSectionWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint_L}) and (min-width: ${({
       theme,
     }) => theme.breakpoint_T}) {
-    width: 71%;
+    width: 90%;
   }
   /* Tablet Version */
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
-    width: 84%;
+    width: 90%;
   }
 `;

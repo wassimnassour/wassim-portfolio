@@ -39,7 +39,7 @@ export const query = graphql`
     ) {
       nodes {
         id
-        excerpt(pruneLength: 200)
+        excerpt(pruneLength: 170)
         frontmatter {
           category
           date

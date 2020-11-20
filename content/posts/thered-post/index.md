@@ -1,7 +1,7 @@
 ---
-title: Coming Soon
-slug: Coming-Soon-3
-date: 2020-11-7
+title: this articel comming soon 2
+slug: Coming-Soon-2
+date: 2020/11/19
 featured: true
 image: home.png
 author: Wassim Nassour

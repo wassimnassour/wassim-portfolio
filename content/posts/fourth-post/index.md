@@ -1,5 +1,5 @@
 ---
-title: Coming Soon
+title: this article coming soon
 slug: Coming-Soon-2
 date: 2020-10-8
 featured: false

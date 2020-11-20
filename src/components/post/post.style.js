@@ -10,7 +10,7 @@ export const PostWrapper = styled.article`
 			: {
 					fontSize: "3rem",
 					width: "100%",
-					height: "30rem",
+					height: "28rem",
 					display: "flex",
 					flexDirection: "row-reverse",
 			  }}
@@ -25,34 +25,11 @@ export const PostWrapper = styled.article`
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 20px 0px;
 		transition: all 0.7s ease 0s;
 	}
-
-	.box-text {
-		height: ${({ location }) => (location === "homePage" ? "50%" : "100%")};
-		padding: 0.8rem 1.3rem 0;
-		width: 60%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		${({ location }) =>
-			location === "homePage" && {
-				width: "100%",
-				height: "auto",
-			}}
-		p {
-			font-size: ${({ location }) =>
-				location === "homePage" ? "1.4rem" : "1.5rem"};
-			color: ${({ theme }) => theme.color__gray};
-		}
-		h1 {
-			font-size: ${({ location }) =>
-				location === "homePage" ? "1.9rem" : "2.35rem"};
-			margin: 0.6rem 0;
-			color: ${({ theme }) => theme.color__text};
-		}
-		span {
-			color: ${({ theme }) => theme.color__gray};
-			font-size: 1.2rem;
-		}
+	/*small Laptop Version */
+	@media (max-width: ${({ theme }) => theme.breakpoint_L}) and (min-width: ${({
+			theme,
+		}) => theme.breakpoint_T}) {
+		height: ${({ location }) => !(location === "homePage") && "30rem"};
 	}
 	/*tablete Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
@@ -62,28 +39,9 @@ export const PostWrapper = styled.article`
 						width: "44%",
 						height: "56rem",
 				  }
-				: { height: "32rem" }}
+				: { height: "26rem" }}
 		margin:1.3rem;
-		.box-text {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			${({ location }) =>
-				location === "homePage" && {
-					width: "100%",
-					height: "auto",
-				}}
-			h1 {
-				margin: 1rem 0;
-				font-size: 2.4rem;
-			}
-			p {
-				font-size: 1.5rem;
-				margin: 0.9rem 0;
-			}
-		}
 	}
-
 	/*mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		margin: 2.9rem 0;
@@ -93,33 +51,80 @@ export const PostWrapper = styled.article`
 			location === "homePage" && {
 				width: "90%",
 			}}
-		.box-text {
-			padding-top: 0;
-			width: 100%;
-			height: auto;
-			a {
-				height: 93%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-			h1 {
-				font-size: 1.9rem;
-				margin: 0.5rem 0;
-			}
-			p {
-				font-size: 1.4rem;
-				margin: 0.4rem 0;
-			}
-			span {
-				margin: 0.2rem 0;
-			}
-		}
 	}
-
 	/*small mobile Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_Mobile_xs}) {
 		height: 52rem;
+	}
+`;
+
+export const ContentBox = styled.div`
+	height: ${({ location }) => (location === "homePage" ? "50%" : "auto")};
+	padding: 0.8rem 1.3rem 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	${({ location }) =>
+		location === "homePage" && {
+			width: "100%",
+			height: "auto",
+		}}
+	p {
+		font-size: ${({ location }) =>
+			location === "homePage" ? "1.3rem" : "1.5rem"};
+		color: ${({ theme }) => theme.color__gray};
+	}
+	h1 {
+		font-size: ${({ location }) =>
+			location === "homePage" ? "1.8rem" : "2.35rem"};
+		margin: 0.6rem 0;
+		color: ${({ theme }) => theme.color__text};
+	}
+	span {
+		color: ${({ theme }) => theme.color__gray};
+		font-size: 1.2rem;
+	}
+	/*tablete Version */
+	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		${({ location }) =>
+			location === "homePage" && {
+				width: "100%",
+				height: "auto",
+			}}
+		h1 {
+			margin: 0.6rem 0;
+			font-size: 1.8rem;
+		}
+		p {
+			font-size: 1.3rem;
+			margin: 0.7rem 0;
+		}
+	}
+	/*mobile Version */
+	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+		width: 100%;
+		height: auto;
+		a {
+			height: 93%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		h1 {
+			font-size: 1.7rem;
+			margin: 0.5rem 0;
+		}
+		p {
+			font-size: 1.4rem;
+			margin: 0.4rem 0;
+		}
+		span {
+			margin: 0.2rem 0;
+		}
 	}
 `;
 

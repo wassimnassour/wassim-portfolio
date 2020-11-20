@@ -5,7 +5,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import RehypeReact from "rehype-react";
 import { Layout, Seo } from "../../components/index";
-import { PostWrapper, H1, H2, H3, H4, Li, P ,Strong ,A} from "./post.style";
+import { PostWrapper, H1, H2, H3, H4, Li, P, Strong, A } from "./post.style";
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -16,8 +16,8 @@ const renderAst = new RehypeReact({
     h4: H4,
     li: Li,
     p: P,
-    strong:Strong,
-    a: A
+    strong: Strong,
+    a: A,
   },
 }).Compiler;
 
@@ -77,7 +77,6 @@ export const query = graphql`
       }
       html
       htmlAst
-      excerpt(pruneLength: 200)
     }
   }
 `;
