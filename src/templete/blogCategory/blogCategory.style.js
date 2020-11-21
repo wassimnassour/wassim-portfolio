@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const CategoryTitle = styled.h1`
 	color: ${({ theme }) => theme.color__text};
-	font-size: 3rem;
-	text-align: center;
+	text-align: left;
+	font-size: 4.5rem;
 	margin-top: 2rem;
 	margin-bottom: 0;
 	text-align: left;

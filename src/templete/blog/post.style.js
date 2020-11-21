@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
 export const PostWrapper = styled.article`
-  margin: 7rem auto;
+  margin: 11rem auto;
   width: 70%;
   .title {
-    text-align: center;
-    font-size: 3.2rem;
+    text-align: left;
+    font-weight: 800;
+    font-size: 4.5rem;
     font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  span {
+    color: ${({ theme }) => theme.color__gray};
+    font-size: 1.6rem;
     margin-bottom: 4rem;
+    display: block;
   }
   .gatsby-image-wrapper {
     max-height: 600px;
@@ -44,9 +51,15 @@ export const PostWrapper = styled.article`
       }
     }
   }
-  /* tablet Version	 */
+  /* tablet Version  */
   @media (max-width: ${({ theme }) => theme.breakpoint_L}) {
     width: 80%;
+    .title {
+      font-size: 3.7rem;
+    }
+    span {
+      font-size: 1.4rem;
+    }
   }
   /* Mobile Version */
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
@@ -65,7 +78,6 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-size: 2.3rem;
   margin: 2rem 0;
-;
 `;
 export const H3 = styled.h3`
   font-size: 2rem;
@@ -81,27 +93,26 @@ export const P = styled.p`
   letter-spacing: 0.3px;
   line-height: 2.7rem;
 
-  @media (max-width: ${({theme})=> theme.breakpoint_M}){
-font-size:1.4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    font-size: 1.4rem;
   }
 `;
 export const Li = styled.li`
   padding-left: 0;
   list-style: disc;
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 
-    @media (max-width: ${({theme})=> theme.breakpoint_M}){
-font-size:1.4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
+    font-size: 1.4rem;
   }
 `;
 
 export const Strong = styled.strong`
   font-size: inherit;
-  color:${({theme})=> theme.color__primary}
+  color: ${({ theme }) => theme.color__primary};
 `;
 
 export const A = styled.a`
   font-size: inherit;
-  color:${({theme})=> theme.color__primary}
+  color: ${({ theme }) => theme.color__primary};
 `;
-

@@ -32,6 +32,10 @@ const Blog = ({ data, pageContext }) => {
       />
       <PostWrapper>
         <h1 className="title">{markdownRemark.frontmatter.title}</h1>
+        <span>
+          created by {markdownRemark.frontmatter.author} in{" "}
+          {markdownRemark.frontmatter.date}{" "}
+        </span>
         <Img
           fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
           objectFit="contain"
@@ -57,6 +61,8 @@ export const query = graphql`
         }
         title
         slug
+        author
+        date
       }
       html
       htmlAst

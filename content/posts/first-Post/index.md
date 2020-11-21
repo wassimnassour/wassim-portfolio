@@ -1,5 +1,5 @@
 ---
-title: Best Resources and way to Be React and React Native Developer in 2020
+title: Best Resources  to Be React and React Native Developer in 2020
 slug: Best-Resources-and-way-to-Be-React-and-React-Native-Developer-in-2020
 
 date: 2020/11/21
@@ -12,7 +12,7 @@ category:
   - dev
 ---
 
-Hi my friend thank you for benign here, so as you know I'm self-taught so I learn all technologies by me so I will tell you how to learn and grow faster and some mistakes I had done in my journey of learning also some best Resources and if you can't afford the price of this courses just get in touch with me I will help you.
+Hi my friend thank you for beign here, so as you know I'm self-taught so I learn all technologies by myself so I will tell you how to learn and grow faster and some mistakes I had done in my journey of learning also some best Resources and if you can't afford the price of this courses just get in touch with me I will help you.
 
 # Things you should learn
 
