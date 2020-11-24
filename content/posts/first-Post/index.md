@@ -1,12 +1,10 @@
 ---
-title: Best Resources  to Be React and React Native Developer in 2020
-slug: Best-Resources-and-way-to-Be-React-and-React-Native-Developer-in-2020
-
+title: Best Resources  to Be React and React Native Developer in 2021
+slug: Best-Resources-and-way-to-Be-React-and-React-Native-Developer-in-2021
 date: 2020/11/21
 featured: true
 image: React-Ecosystem.jpg
 author: Wassim Nassour
-
 category:
   - life
   - dev
@@ -76,8 +74,9 @@ For React Native I think one course from Mosh Hamadani Will be good if you alrea
 
 #### Best youtube channels To follow :
 
-[ Arbaoui Mahedi](https://www.youtube.com/user/TechGuyWeb)
+[ Arbaoui Mahedi](https://www.youtube.com/channel/UC6u-1b7VOVIC8LuJpnTNhOg)
 this is only for Moroccan guys <br />
 [Traversy Media](https://www.youtube.com/user/TechGuyWeb) <br />
-[Wesbos](https://www.youtube.com/user/TechGuyWeb) <br />
-[ The Ninja](https://www.youtube.com/user/TechGuyWeb) <br />
+[Wesbos](https://www.youtube.com/user/wesbos) <br />
+[ The Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg) <br />
+[techsith](https://www.youtube.com/user/techSithTube) <br />
