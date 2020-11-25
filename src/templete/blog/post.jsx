@@ -29,6 +29,8 @@ const Blog = ({ data, pageContext }) => {
       <Seo
         title={markdownRemark.frontmatter.title}
         description={markdownRemark.excerpt}
+        image={markdownRemark.frontmatter.image.childImageSharp.fluid}
+        article
       />
       <PostWrapper>
         <h1 className="title">{markdownRemark.frontmatter.title}</h1>

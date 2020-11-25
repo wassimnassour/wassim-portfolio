@@ -4,12 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "wassimnassour",
-    author: "wassimnassour",
-    description: "This Site Made With Love And React Gatsby ",
-    url: "http://wassimnassour.netlify.app/",
-    image: "/images/snape.jpg",
+    image: "/images/portfolio.png",
+    defaultTitle: "wassimnassour",
+    description:
+      "Wassim Nassour Self-taught front-end developer . i built this Portfolio With React and Gatsby ",
+    author: "@wassimnassour",
     twitterUsername: "@wassimnassour",
+    url: "https://wassimnassour.vercel.app/",
   },
 
   plugins: [

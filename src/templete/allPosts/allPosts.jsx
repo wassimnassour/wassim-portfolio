@@ -1,13 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { BlogSectionWrapper } from "./allPosts.style";
-import { Layout, BigTitle, Pagination, Post } from "../../components/index";
+import {
+  Layout,
+  BigTitle,
+  Pagination,
+  Post,
+  Seo,
+} from "../../components/index";
 const AllPosts = ({ data, pageContext }) => {
   const {
     allMarkdownRemark: { nodes: posts },
   } = data;
   return (
     <Layout>
+      <Seo title="Blog" />
       <BigTitle>Blog</BigTitle>
       <BlogSectionWrapper>
         {posts.map(post => (
