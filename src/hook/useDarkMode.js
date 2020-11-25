@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 export const useDarkMode = () => {
-  const [theme, setTheme] = useState(null;
+  const [theme, setTheme] = useState(null);
   const setMode = mode => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
