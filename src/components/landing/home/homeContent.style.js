@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
-  width: 94%;
-  margin: 1rem auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 60vh;
+
   /* Mobile Version  */
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     height: 70vh;
@@ -14,6 +14,8 @@ export const HeroContainer = styled.section`
 
 export const ContentWrapper = styled.div`
   height: 100%;
+  width: 70%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +38,7 @@ export const ContentWrapper = styled.div`
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
-    line-height: 2.2rem;
+    line-height: 2.3rem;
     letter-spacing: 0.1rem;
     margin: 1.3rem 0;
     color: ${({ theme }) => theme.color__gray};
@@ -49,6 +51,50 @@ export const ContentWrapper = styled.div`
     font-size: 1.5rem;
     letter-spacing: 2px;
     text-align: left;
+  }
+
+  .link_chat {
+    font-size: 3rem;
+    display: inline;
+    margin: 0;
+    color: white;
+    position: relative;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 0.4rem;
+    &::before {
+      content: " ";
+      background: ${({ theme }) => theme.color__primary};
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      padding: 0.5rem;
+      bottom: 7px;
+      transform: rotateZ(-2deg);
+      z-index: -66;
+    }
+    .right {
+      color: ${({ theme }) => theme.color__white};
+      display: block;
+      font-size: 4rem;
+      margin-left: 0.6rem;
+      animation: toRight 1s infinite;
+    }
+  }
+
+  @keyframes toRight {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   /*Laptop Version */
@@ -65,7 +111,8 @@ export const ContentWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) and (min-width: ${({
       theme,
     }) => theme.breakpoint_M}) {
-    margin: 1rem 0 0 2rem;
+    margin: 0 auto;
+    width: 80%;
     h1 {
       letter-spacing: 4px;
       line-height: 7rem;
@@ -77,9 +124,13 @@ export const ContentWrapper = styled.div`
     }
     span {
       width: unset;
-      line-height: 2.1rem;
+      line-height: 2.4rem;
       font-size: 1.4rem;
-      margin: 0.4rem 0;
+      margin: 0.8rem 0;
+    }
+    .link_chat {
+      font-size: 2.8rem;
+      background: ${theme => theme.color__primary};
     }
   }
 

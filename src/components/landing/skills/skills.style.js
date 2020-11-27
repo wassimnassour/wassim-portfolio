@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.section`
   height: auto;
-
-  margin: 3.5rem 0 6rem;
-
+  margin: 3.5rem auto 9rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
 
   .skills {
     display: flex;
@@ -20,6 +19,7 @@ export const SkillsContainer = styled.section`
 
   //media queries form Tablete
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
+    width: 100%;
     .skills {
       flex-wrap: wrap;
       justify-content: center;

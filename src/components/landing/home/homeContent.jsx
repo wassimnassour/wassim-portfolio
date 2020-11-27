@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+import { TiArrowRightThick } from "react-icons/ti";
 import { CustomButton, SocialMediaIcons } from "../../index";
 import { useFixed } from "../../../hook/useFixed";
 import {
@@ -21,10 +23,12 @@ const HomeContent = () => {
           Code, by using current best practices in web development
         </span>
         <ButtonWrapper>
-          <ResumeButton href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing">
-            Resume
-          </ResumeButton>
-          <CustomButton content={"Contact me"} url={"contact"} color="black" />
+          <Link to="/contact" className="link_chat">
+            Let's Have Talk
+            <span className="right">
+              <TiArrowRightThick />
+            </span>
+          </Link>
         </ButtonWrapper>
       </ContentWrapper>
       <ContactList fixed={fixed}>
