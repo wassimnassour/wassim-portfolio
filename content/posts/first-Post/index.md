@@ -10,7 +10,7 @@ category:
   - dev
 ---
 
-Hi my friend thank you for beign here, so as you know I'm self-taught so I learn all technologies by myself so I will tell you how to learn and grow faster and some mistakes I had done in my journey of learning also some best Resources and if you can't afford the price of this courses just get in touch with me I will help you.
+Hi my friend, thank you for being here. As you may know I am self-taugh, I had learned all the technologies by myself. In this article I will tell you how to learn and grow faster and I will show you some mistakes that I have done in my journey of learning I am going to show you also some best resources you can use, if you can't afford the price of this courses just contact me and i will help you.
 
 # Things you should learn
 
