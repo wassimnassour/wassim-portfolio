@@ -5,8 +5,8 @@ export const AboutPageWrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 2rem auto 2rem;
+  max-width: 1200px;
   svg {
     margin: 1rem 2rem;
   }

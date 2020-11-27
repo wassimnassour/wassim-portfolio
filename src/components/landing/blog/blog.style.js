@@ -4,9 +4,10 @@ export const BlogContainer = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
   padding: 1rem;
   height: auto;
+  width: 1500px;
 `;
 export const BlogWrapper = styled.div`
   display: flex;

@@ -6,7 +6,6 @@ const About = () => {
 	return (
 		<Layout>
 			<Seo title="About" description="this page contain Infos about me " />
-			<BigTitle>About</BigTitle>
 			<AboutPage />
 		</Layout>
 	);

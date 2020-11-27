@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FormContainer, Form, ContactPageContainer } from "./contact.style";
-
 import { FaEnvelope, FaPhoneAlt, FaHome } from "react-icons/fa";
 import { useFormik } from "formik";
 import axios from "axios";
 import { navigate } from "gatsby";
+import { FormContainer, Form, ContactPageContainer } from "./contact.style";
+
 const ContactPage = () => {
   const validate = values => {
     const errors = {};

@@ -9,6 +9,8 @@ const PageNotFound = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 76vh;
+	width: 1200px;
+	margin: 0 auto;
 	img {
 		width: 60%;
 	}
