@@ -14,7 +14,10 @@ const AllPosts = ({ data, pageContext }) => {
   } = data;
   return (
     <Layout>
-      <Seo title="Blog" />
+      <Seo
+        title="wassimnassour | Blog"
+        description="this page is where i worte some articles"
+      />
       <BigTitle>Blog</BigTitle>
       <BlogSectionWrapper>
         {posts.map(post => (

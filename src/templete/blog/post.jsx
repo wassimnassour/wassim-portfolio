@@ -29,7 +29,7 @@ const Blog = ({ data, pageContext }) => {
       <Seo
         title={markdownRemark.frontmatter.title}
         description={markdownRemark.excerpt}
-        image={markdownRemark.frontmatter.image.childImageSharp.fluid}
+        image={markdownRemark.frontmatter.image.publicURL}
         article
       />
       <PostWrapper>
@@ -55,6 +55,7 @@ export const query = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         image {
+          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid

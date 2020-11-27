@@ -4,13 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    image: "/images/portfolio.png",
-    defaultTitle: "wassimnassour",
+    image: "/portfolio.png",
+    title: "wassimnassour",
     description:
-      "Wassim Nassour Self-taught front-end developer . i built this Portfolio With React and Gatsby ",
+      "I'm Wassim Nassour Self-taught front-end developer . i built this Portfolio With React and Gatsby ",
     author: "@wassimnassour",
     twitterUsername: "@wassimnassour",
-    url: "https://wassimnassour.vercel.app/",
+    url: "https://wassimnassour.vercel.app",
   },
 
   plugins: [

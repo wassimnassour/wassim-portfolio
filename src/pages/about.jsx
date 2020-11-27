@@ -5,7 +5,10 @@ import { BigTitle } from "../components/utilityStyle";
 const About = () => {
 	return (
 		<Layout>
-			<Seo title="About" description="this page contain Infos about me " />
+			<Seo
+				title="About"
+				description="this page contain information  about me "
+			/>
 			<BigTitle>About</BigTitle>
 			<AboutPage />
 		</Layout>
