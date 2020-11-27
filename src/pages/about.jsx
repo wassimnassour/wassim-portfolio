@@ -1,7 +1,5 @@
 import React from "react";
 import { Layout, AboutPage, Seo } from "../components/index";
-import { BigTitle } from "../components/utilityStyle";
-
 const About = () => {
 	return (
 		<Layout>

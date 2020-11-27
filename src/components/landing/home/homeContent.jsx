@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import { TiArrowRightThick } from "react-icons/ti";
-import { CustomButton, SocialMediaIcons } from "../../index";
+import { SocialMediaIcons } from "../../index";
 import { useFixed } from "../../../hook/useFixed";
 import {
   HeroContainer,
   ButtonWrapper,
-  ResumeButton,
   ContentWrapper,
   ContactList,
 } from "./homeContent.style";

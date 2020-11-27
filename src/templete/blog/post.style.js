@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PostWrapper = styled.article`
   margin: 11rem auto;
-  width: 70%;
+  max-width: 850px;
   .title {
     text-align: left;
     font-weight: 800;
@@ -89,7 +89,7 @@ export const H4 = styled.h4`
   margin-bottom: 0;
 `;
 export const P = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   letter-spacing: 0.3px;
   line-height: 2.7rem;
 
@@ -100,7 +100,7 @@ export const P = styled.p`
 export const Li = styled.li`
   padding-left: 0;
   list-style: disc;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoint_M}) {
     font-size: 1.4rem;
