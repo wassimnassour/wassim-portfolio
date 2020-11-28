@@ -7,7 +7,7 @@ export const CategoryTitle = styled.h1`
 	margin-top: 2rem;
 	margin-bottom: 0;
 	text-align: left;
-	width: 100%;
+	max-width: 1400px;
 	/* Tablet Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_T}) {
 		font-size: 2.5rem;

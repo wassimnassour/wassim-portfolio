@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
 import { contactIcons } from "../../constants/contactIcons";
-import { BigTitle } from "../utilityStyle";
 import { useStaticQuery, graphql } from "gatsby";
 import { AboutPageContainer, AboutPageWrapper } from "./about.style";
 const AboutPage = () => {
@@ -19,8 +18,6 @@ const AboutPage = () => {
   return (
     <AboutPageContainer>
       <AboutPageWrapper>
-        <BigTitle>About</BigTitle>
-
         <div className="about__content">
           <div className="image-wrapper">
             <Image

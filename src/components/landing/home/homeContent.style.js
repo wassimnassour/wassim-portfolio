@@ -57,7 +57,7 @@ export const ContentWrapper = styled.div`
     font-size: 3rem;
     display: inline;
     margin: 0;
-    color: white;
+    color: ${({ theme }) => theme.color__text};
     position: relative;
     font-weight: 600;
     display: flex;
@@ -79,7 +79,7 @@ export const ContentWrapper = styled.div`
       z-index: -66;
     }
     .right {
-      color: ${({ theme }) => theme.color__white};
+      color: ${({ theme }) => theme.color__text};
       display: block;
       font-size: 4rem;
       margin-left: 0.6rem;
@@ -155,6 +155,10 @@ export const ContentWrapper = styled.div`
     a {
       width: 16rem;
       height: 4rem;
+    }
+    .link_chat {
+      font-size: 2.4rem;
+      background: ${theme => theme.color__primary};
     }
   }
 

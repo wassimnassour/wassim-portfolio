@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
 	width: 30%;
 	text-align: center;
 	margin: 1rem;
-	border-right: 1px solid #292828;
+	border-right: 1px solid #3a3a3a3d;
 	&:nth-last-child(1) {
 		border-right: none;
 	}

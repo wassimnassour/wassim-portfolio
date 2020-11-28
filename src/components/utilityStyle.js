@@ -12,7 +12,7 @@ export const BigTitle = styled.h1`
 	padding: 2rem;
 	color: ${({ theme }) => theme.color__text};
 	text-align: center;
-	width: 1200px;
+	width: 88%;
 	margin-right: auto;
 	margin-left: auto;
 `;

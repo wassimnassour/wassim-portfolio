@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectSectionContainer = styled.section`
   height: auto;
-  width: 1200px;
+  max-width: 1200px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;

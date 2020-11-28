@@ -7,7 +7,7 @@ export const BlogContainer = styled.section`
   margin: 2rem auto;
   padding: 1rem;
   height: auto;
-  width: 1500px;
+  max-width: 1500px;
 `;
 export const BlogWrapper = styled.div`
   display: flex;
@@ -29,8 +29,6 @@ export const BlogWrapper = styled.div`
     justify-content: center;
 
     article:last-child {
-      /*      margin: 1.5rem;
-*/
     }
   }
 `;
