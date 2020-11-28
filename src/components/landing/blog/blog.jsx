@@ -1,5 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import Fade from "react-reveal/Fade";
+
 import { BlogContainer, BlogWrapper } from "./blog.style";
 import { Title } from "../../utilityStyle";
 import { CustomButton, Post } from "../../index";
@@ -38,21 +40,24 @@ const Blog = () => {
   return (
     <BlogContainer>
       <Title>Latest post</Title>
-      <BlogWrapper>
-        {allMarkdownRemark.nodes.map(Article => (
-          <Post
-            location="homePage"
-            key={Article.id}
-            image={Article.frontmatter.image.childImageSharp.fluid}
-            title={Article.frontmatter.title}
-            link={Article.frontmatter.slug}
-            description={Article.excerpt}
-            categories={Article.frontmatter.category}
-            date={Article.frontmatter.date}
-            author={Article.frontmatter.author}
-          />
-        ))}
-      </BlogWrapper>
+      <Fade bottom>
+        <BlogWrapper>
+          {allMarkdownRemark.nodes.map(Article => (
+            <Post
+              location="homePage"
+              key={Article.id}
+              image={Article.frontmatter.image.childImageSharp.fluid}
+              title={Article.frontmatter.title}
+              link={Article.frontmatter.slug}
+              description={Article.excerpt}
+              categories={Article.frontmatter.category}
+              date={Article.frontmatter.date}
+              author={Article.frontmatter.author}
+            />
+          ))}
+        </BlogWrapper>
+      </Fade>
+
       <CustomButton color="black" content="See more" url="/blog/1" />
     </BlogContainer>
   );
