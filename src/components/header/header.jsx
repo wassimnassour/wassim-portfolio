@@ -34,7 +34,13 @@ const Header = ({ theme, toggleTheme }) => {
           <Link to="/">{theme === "light" ? <LogoDark /> : <LogoWhite />}</Link>
         </LogoWrapper>
         <NavLinksWrapper>
-          <ul>{linkTemplet}</ul>
+          <ul>
+            {linkTemplet}
+            <li>
+              {" "}
+              <a href="https://drive.google.com/drive/my-drive">Resume</a>
+            </li>
+          </ul>
           <ThemeButton className="button" onClick={toggleTheme}>
             {theme === "light" ? <FaMoon /> : <FaRegSun />}
           </ThemeButton>

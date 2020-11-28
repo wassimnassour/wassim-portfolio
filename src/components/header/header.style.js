@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 
 export const NavBarContainer = styled.header`
@@ -42,6 +42,12 @@ export const LogoWrapper = styled.div`
     margin-left: 0.4rem;
   }
 `;
+export const link = css`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color__text};
+  font-size: 1.6rem;
+  font-weight: 400;
+`;
 export const NavLinksWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint_T}) {
     display: none;
@@ -59,16 +65,15 @@ export const NavLinksWrapper = styled.div`
       .active {
         border-bottom: 2px solid ${({ theme }) => theme.color__primary};
       }
+      a {
+        ${link}
+      }
     }
   }
 `;
 
 export const A = styled(Link)`
-  text-decoration: none;
-
-  color: ${({ theme }) => theme.color__text};
-  font-size: 1.6rem;
-  font-weight: 400;
+  ${link}
 `;
 
 export const ThemeButton = styled.button`
