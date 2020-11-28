@@ -39,6 +39,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
+    "react-reveal": "^1.2.2",
     "rehype-react": "^6.1.0",
     "styled-components": "^5.1.1"
   },

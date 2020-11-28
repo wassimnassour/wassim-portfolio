@@ -1,7 +1,6 @@
 import React from "react";
-import { Header, Footer, Main } from "../index";
-
 import { ThemeProvider } from "styled-components";
+import { Header, Footer, Main, Alert } from "../index";
 import { GlobalStyle } from "../../globelStyle";
 import { useDarkMode } from "../../hook/useDarkMode";
 import { lightTheme, darkTheme } from "../../theme";
@@ -13,8 +12,8 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
+      <Alert />
       <Header toggleTheme={toggleTheme} theme={theme} />
-
       <Main>{children}</Main>
       <Footer />
     </ThemeProvider>
