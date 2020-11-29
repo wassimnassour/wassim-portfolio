@@ -33,7 +33,7 @@ export const CardContainer = styled.div`
 		height: 240px;
 		border-right: none;
 		box-shadow: rgba(33, 33, 33, 0.14) 0px 0px 4px 0px;
-		background: #1d1d1d;
+		background: ${({ theme }) => theme.color__article};
 		border-radius: 8px;
 		padding: 1rem;
 		p {
