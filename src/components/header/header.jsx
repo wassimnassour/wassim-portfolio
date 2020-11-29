@@ -38,7 +38,9 @@ const Header = ({ theme, toggleTheme }) => {
             {linkTemplet}
             <li>
               {" "}
-              <a href="https://drive.google.com/drive/my-drive">Resume</a>
+              <a href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing">
+                Resume
+              </a>
             </li>
           </ul>
           <ThemeButton className="button" onClick={toggleTheme}>
