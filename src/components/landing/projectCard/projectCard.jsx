@@ -28,11 +28,11 @@ const ProjectCard = ({
 				</ProjectDetails>
 
 				<LinksWrapper>
-					<a href={urlGithub}>
+					<a href={urlGithub} target="_blank">
 						<FaGithub />
 					</a>
 					{url ? (
-						<a href={url}>
+						<a href={url} target="_blank">
 							<FaExternalLinkAlt />
 						</a>
 					) : null}
