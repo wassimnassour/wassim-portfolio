@@ -13,6 +13,7 @@ const Skills = () => {
         <div className="skills">
           {data.map(_el => (
             <SkillCard
+              key={_el.id}
               post={_el.id}
               name={_el.name}
               description={_el.description}
