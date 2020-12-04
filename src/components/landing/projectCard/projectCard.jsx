@@ -5,7 +5,7 @@ import { Project, LinksWrapper, ProjectDetails } from "./projectCard.style";
 const ProjectCard = ({
 	name,
 	stars,
-	urlGithub,
+	githubUrl,
 	url,
 	primaryLanguage,
 	forkCount,
@@ -28,11 +28,11 @@ const ProjectCard = ({
 				</ProjectDetails>
 
 				<LinksWrapper>
-					<a href={urlGithub} target="_blank">
+					<a href={githubUrl} target="_blank" rel="noreferrer">
 						<FaGithub />
 					</a>
 					{url ? (
-						<a href={url} target="_blank">
+						<a href={url} target="_blank" rel="noreferrer">
 							<FaExternalLinkAlt />
 						</a>
 					) : null}

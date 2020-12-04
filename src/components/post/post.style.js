@@ -9,8 +9,8 @@ export const PostWrapper = styled.article`
 			  }
 			: {
 					fontSize: "3rem",
-					width: "100%",
-					height: "28rem",
+					width: "90%",
+					height: "26rem",
 					display: "flex",
 					flexDirection: "row-reverse",
 			  }}

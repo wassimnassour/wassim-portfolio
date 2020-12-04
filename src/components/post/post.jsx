@@ -45,9 +45,6 @@ const Post = ({
 				<Link to={`/blog/${link}`}>
 					<h1>{title}</h1>
 					<p>{description}...</p>
-					<p>
-						By {author} In {date}
-					</p>
 				</Link>
 			</ContentBox>
 		</PostWrapper>

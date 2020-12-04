@@ -44,7 +44,7 @@ const Project = () => {
       },
     },
   } = data;
-
+  console.log(edges, "edges");
   return (
     <ProjectSectionContainer>
       <Title> Open Source Projects</Title>
