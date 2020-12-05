@@ -8,7 +8,7 @@ import { data } from "../../../constants/skillsCard";
 const Skills = () => {
   return (
     <SkillsContainer>
-      <Fade right>
+      <Fade right distance="80px">
         <Title>Skills</Title>
         <div className="skills">
           {data.map(_el => (

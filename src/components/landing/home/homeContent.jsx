@@ -15,7 +15,7 @@ const HomeContent = () => {
   return (
     <HeroContainer fixed={fixed}>
       <ContentWrapper>
-        <Fade left>
+        <Fade left distance="80px">
           <span className="job-title">Front-End Developer</span>
           <h1>Wassim Nassour</h1>
           <span>

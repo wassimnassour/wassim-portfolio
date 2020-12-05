@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const Alert = () => {
 	return (
 		<AlertStyle>
-			<Fade right>
+			<Fade right distance="100px">
 				<span>Hi i'm Open To Work as Front-end developer</span>
 			</Fade>{" "}
 		</AlertStyle>
