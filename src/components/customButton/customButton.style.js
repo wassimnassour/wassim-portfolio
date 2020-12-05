@@ -18,7 +18,7 @@ const cheeckColor = props => {
   }
   return BlackButton;
 };
-export const ButtonWrapper = styled(Link)`
+const StyleLink= css`
   text-decoration: finone;
   font-weight: 400;
   width: 175px;
@@ -38,4 +38,11 @@ export const ButtonWrapper = styled(Link)`
     background: ${({ theme }) => theme.color__primary__2};
   }
   ${cheeckColor}
+`
+export const InternalLink = styled(Link)`
+${StyleLink}
+`;
+export const ExternalLink = styled.a`
+ ${StyleLink}
+
 `;

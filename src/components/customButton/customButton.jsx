@@ -1,10 +1,17 @@
 import React from "react";
-import { ButtonWrapper } from "./customButton.style";
-export const CustomButton = ({ content, color, url }) => {
+import { ExternalLink ,InternalLink} from "./customButton.style";
+export const CustomButton = ({ content, color, url ,type }) => {
+  if (type === "external") {
+    return (
+      <ExternalLink href={url} color={color} target="_blank" rel="noreferrer">
+        {content}
+      </ExternalLink>
+    );
+  }
   return (
-    <ButtonWrapper to={url} color={color}>
+    <InternalLink to={url} color={color}>
       {content}
-    </ButtonWrapper>
+    </InternalLink>
   );
 };
 

@@ -44,7 +44,6 @@ const Project = () => {
       },
     },
   } = data;
-  console.log(edges, "edges");
   return (
     <ProjectSectionContainer>
       <Title> Open Source Projects</Title>
@@ -66,6 +65,7 @@ const Project = () => {
           })}
           <div className="button">
             <CustomButton
+            type="external"
               color="black"
               content="See more"
               url="https://github.com/wassimnassour"

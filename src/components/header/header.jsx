@@ -38,7 +38,7 @@ const Header = ({ theme, toggleTheme }) => {
             {linkTemplet}
             <li>
               {" "}
-              <a href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1QVqHaoN7WfTmhHZs5iffJOSv4rZwYKcF/view?usp=sharing" target="_blank" rel="noreferrer">
                 Resume
               </a>
             </li>
