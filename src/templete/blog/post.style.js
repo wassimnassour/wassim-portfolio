@@ -70,7 +70,11 @@ export const PostWrapper = styled.article`
     }
   }
 `;
-
+export const Comments = styled.div`
+    margin-top: 7rem;
+    margin-bottom: 0;
+    width: 100%;
+`;
 export const H1 = styled.h1`
   font-size: 3rem;
   margin: 2rem 0;
