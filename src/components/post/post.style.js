@@ -147,6 +147,7 @@ export const Category = styled.li`
 		font-size: ${({ location }) => (location === "homePage" ? "1.3rem" : "1.5rem")};
 		font-weight: 600;
 		min-width: 60px;
+		padding: 0 7px;
 		border-radius: 1.7rem;
 		background: ${({ category }) =>
 			category === "dev"
@@ -154,11 +155,12 @@ export const Category = styled.li`
 				: category === "life"
 				? "#16a596"
 				: category === "Events"
-				? "#721b65"
+				? "#721b65": category === "JavaScript"
+				? "#f5a31a"
 				: ""};
 	}
 	
- /* Mobile Version */
+ /* Mobie Version */
 	@media (max-width: ${({ theme }) => theme.breakpoint_M}) {
 		.category_link {
 			font-size: 1.3rem;

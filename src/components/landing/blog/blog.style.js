@@ -29,6 +29,7 @@ export const BlogWrapper = styled.div`
     justify-content: center;
 
     article:last-child {
+      margin: 1rem 0; 
     }
   }
 `;

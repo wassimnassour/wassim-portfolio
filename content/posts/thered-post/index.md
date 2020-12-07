@@ -1,5 +1,5 @@
 ---
-title: this articel comming soon 2
+title: this articel comming soon 6
 slug: Coming-Soon-2
 date: 2020/11/19
 featured: true
