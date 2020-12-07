@@ -165,6 +165,7 @@ export const Category = styled.li`
 			font-weight: 600;
 			border-radius: 1.6rem;
 	}
+	}
 `;
 
 export const ImageWrapper = styled.div`

@@ -10,16 +10,16 @@ export const PostWrapper = styled.article`
     font-weight: 700;
     margin-bottom: 2rem;
   }
+  .gatsby-resp-image-wrapper{
+   max-height:650px;
+   max-width:850px !important ;
+  }
   span {
     color: ${({ theme }) => theme.color__gray};
     font-size: 1.6rem;
     margin-bottom: 4rem;
     display: block;
   }
-  .gatsby-image-wrapper {
-    max-height: 600px;
-  }
-
   .buttons {
     display: flex;
     justify-content: space-between;

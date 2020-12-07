@@ -46,11 +46,7 @@ const Blog = ({ data, pageContext }) => {
           created by {markdownRemark.frontmatter.author} in{" "}
           {markdownRemark.frontmatter.date}{" "}
         </span>
-        <Img
-          fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
-          objectFit="contain"
-          objectPosition="50% 50%"
-        />
+
         {renderAst(markdownRemark.htmlAst)}
         <Comments>
         <Disqus.DiscussionEmbed
