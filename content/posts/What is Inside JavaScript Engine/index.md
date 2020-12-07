@@ -66,8 +66,6 @@ An interpreter directly executes each line of code line by line, without requiri
 
 The compiler works ahead of Bme to convert instructions into a machine-code or lower-level form so that they can be read and executed by a computer. It runs all of the code and tries to figure out what the code does and then compiles it down into another language that is easier for the computer to read. Have you heard of Babel or Typescript? They are heavily used in the Javascript ecosystem and you should now have a good idea of what they are. Babel is a JavaScript compiler that takes your modern JS code and returns browser compaBble JS (older JS code). Typescript is a superset of Javascript that compiles down to JavaScript. Both of these do exactly what compilers do. Take one language and convert into a different one!
 
-in the last years modern engines ,
-
 In modern engines, the interpreter starts reading the code line by line while
 the profiler watches for frequently used code and flags then passes is to the compiler to be optimized. In the end, the JavaScript engine takes the bytecode the interpreter
 outputs and mixes in the optimized code the compiler outputs and then gives that to the
