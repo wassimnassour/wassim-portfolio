@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { FaRegSun, FaMoon } from "react-icons/fa";
+import {  FaMoon } from "react-icons/fa";
+import { FiSun } from "react-icons/fi";
 
 import {
   NavBarContainer,
@@ -44,7 +45,7 @@ const Header = ({ theme, toggleTheme }) => {
             </li>
           </ul>
           <ThemeButton className="button" onClick={toggleTheme}>
-            {theme === "light" ? <FaMoon /> : <FaRegSun />}
+            {theme === "light" ? <FaMoon /> : <FiSun />}
           </ThemeButton>
         </NavLinksWrapper>
         <SideBar

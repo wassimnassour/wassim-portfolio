@@ -3,7 +3,9 @@ import { SideBarContainer, Button } from "./sideBar.style";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { pageLinks } from "../../constants/links";
 import { ThemeButton } from "../header/header.style";
-import { FaRegSun, FaMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+import { FiSun } from "react-icons/fi";
+
 import { Link } from "gatsby";
 
 const SideBar = ({ open, togglebutton, theme, toggleTheme }) => {
@@ -33,7 +35,7 @@ const SideBar = ({ open, togglebutton, theme, toggleTheme }) => {
 								<li>Resume</li>
 							</a>
 							<ThemeButton className="button" onClick={toggleTheme}>
-								{theme === "light" ? <FaMoon /> : <FaRegSun />}
+								{theme === "light" ? <FaMoon /> : <FiSun />}
 							</ThemeButton>
 						</ul>
 					</div>

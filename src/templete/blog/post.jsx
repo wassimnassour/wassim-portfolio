@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
 import Disqus from 'disqus-react'
-
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 import RehypeReact from "rehype-react";
 import { Layout, Seo } from "../../components/index";
