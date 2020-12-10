@@ -10,6 +10,10 @@ export const PostWrapper = styled.article`
     font-weight: 700;
     margin-bottom: 2rem;
   }
+  .gif{
+    width:100%;
+    max-height:600px;
+  }
   .gatsby-resp-image-wrapper{
    max-height:650px;
    max-width:850px !important ;

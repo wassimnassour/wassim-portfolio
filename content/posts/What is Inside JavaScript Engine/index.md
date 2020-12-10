@@ -26,6 +26,8 @@ Imagine if somebody comes up to you and gives you a computer and they tell you h
 
 the Reaction of computer will be like this.
 
+<img class="gif" src=https://media.giphy.com/media/26BkNYAuK4IRbgP6M/source.gif  />
+
 If I gave a computer with a CPU a file that is a javascript file and I tell it hey read this file and do something for me. Well the computer only understands ones and zeros at the end of the day. So the computer doesn't really know what javascript is
 
 So anytime we use an engine we're able to give it a javascript file and this javascript file gets understood by the engine and it allows this engine to communicate and tell the machine or the computer to do what we ask it to do
