@@ -6,7 +6,7 @@ import { AboutPageContainer, AboutPageWrapper } from "./about.style";
 const AboutPage = () => {
   const IamgeLaptop = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "laptop.jpg" }) {
+      file(relativePath: { eq: "wassim.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
