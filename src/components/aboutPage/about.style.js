@@ -19,8 +19,10 @@ export const AboutPageWrapper = styled.article`
     margin: 2rem auto 5rem;
     a {
       text-decoration: underline;
-
       letter-spacing: 1px;
+      font-size:inherit;
+      color:${({theme})=> theme.color__primary};
+      font-weight: 600;
     }
 
     .gatsby-image-wrapper {
@@ -31,7 +33,7 @@ export const AboutPageWrapper = styled.article`
     }
     .important__word {
       color: ${({ theme }) => theme.color__primary};
-      font-weight: 700;
+      font-weight: 600;
       font-size: 1.8rem;
     }
 
