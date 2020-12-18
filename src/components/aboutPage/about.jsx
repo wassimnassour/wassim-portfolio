@@ -37,7 +37,7 @@ const AboutPage = () => {
             current best practices in web development , by using many
             technologies such us JavaScript , React , Redux , Gatsby ..... , In
             my downtime, I enjoy reading about tech, or watching some tutorials
-            in addition i 'm start blogging in my <Link to="/blog/1">Blog</Link>{" "}
+            in addition i write articles in my  <Link to="/blog/1">Blog</Link>{" "}
             .
             <br /> So I'm locking for opportunity to develop my skills , team
             oriented and a happy workplace. To know more about me, please visit
