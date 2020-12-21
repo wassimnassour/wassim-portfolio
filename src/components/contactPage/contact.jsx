@@ -38,7 +38,6 @@ const ContactPage = () => {
     },
     validate,
     onSubmit: (values, actions) => {
-      console.log(actions);
       axios({
         method: "POST",
         url: "https://formspree.io/meqrwnbn",
