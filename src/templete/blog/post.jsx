@@ -61,6 +61,7 @@ export const query = graphql`
   query getPost($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
+      excerpt
       frontmatter {
         image {
           publicURL
