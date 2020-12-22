@@ -21,7 +21,6 @@ const happy = true;
 ```
 
 Well we just wrote some JavaScript , Now how do we read this or how does the computer read this.
-
 Imagine if somebody comes up to you and gives you a computer and they tell you hey tell this computer to display a picture of horses on the screen and you start looking at this computer and you tell the computer to display an image of a horse or horses in French is the computer going to understand you know the computer would have no idea what you just said in similar fashion.
 
 the Reaction of computer will be like this.
@@ -30,9 +29,7 @@ the Reaction of computer will be like this.
 
 If I gave a computer with a CPU a file that is a javascript file and I tell it hey read this file and do something for me. Well the computer only understands ones and zeros at the end of the day. So the computer doesn't really know what javascript is
 
-So anytime we use an engine we're able to give it a javascript file and this javascript file gets understood by the engine and it allows this engine to communicate and tell the machine or the computer to do what we ask it to do
-
-but what is inside this engine, this magical machine that understands javascript it reads our code and then it runs this code.
+So anytime we use an engine we're able to give it a javascript file and this javascript file gets understood by the engine and it allows this engine to communicate and tell the machine or the computer to do what we ask it to do ,but what is inside this engine, this magical machine that understands javascript it reads our code and then it runs this code.
 
 Let's get into that
 
@@ -47,17 +44,13 @@ The first thing that happens within the JavaScript engine is parsing of our code
 ## **Abstract Syntax Tree (AST)**
 
 The parser produces a data structure called the Abstract Syntax Tree or AST. AST is a
-
 tree graph of the source code that does not show every detail of the original syntax, but
-
 contains structural or content-related details. Certain things are implicit in the tree and
-
 do not need to be shown, hence the Btle abstract.
 
 ## **Profiler :**
 
 The profiler is responsible for checking our code. It also calls a monitor that monitors and watches our code as it runs and makes notes on how we could optimize this code. Ex: How many times it is being run? What types are used? How can we optimize this code?
-
 So, if the profiler finds some code that can be optimized, it passes this code to the Just-In-Time (JIT) compiler, so it can be compiled and runs faster.
 
 ## **Interpreter :**
