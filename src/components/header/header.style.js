@@ -7,7 +7,7 @@ export const NavBarContainer = styled.header`
   width: 100%;
   padding: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 20px 0px;
-  background: ${({ theme }) => theme.color__background};
+  background: ${({ theme }) => theme.color__primary};
   z-index: 100;
   a {
     color: ${({ theme }) => theme.color__text};

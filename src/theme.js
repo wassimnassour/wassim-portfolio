@@ -1,16 +1,15 @@
 export const theme = {
-  color__white: "#EEE",
-  color__gray: "#6c757d",
+  color__white: "#FFFFFF",
+  color__gray: "#808DAD",
   color__gray__dark: "#464646",
   color__primary__2: "#007bff",
-  color__primary: "#0274dc",
-  color__background: "#191919",
+  color__primary: "#0E1630",
+  color__secondary: "#EB4A4A",
   color__text: "#EEEE",
   color__sub__text: "#eee",
   color__footer: "#343a40",
   color__svg: "#2b2b2bba",
   color__article: "#2b2a2a",
-
   // breakpoint
   breakpoint_Mobile_xs: "378px",
   breakpoint_M: "550px",

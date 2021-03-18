@@ -67,7 +67,7 @@ export const ContentWrapper = styled.div`
     margin-top: 0.4rem;
     &::before {
       content: " ";
-      background: ${({ theme }) => theme.color__primary};
+      background: ${({ theme }) => theme.color__secondary};
       position: absolute;
       left: 0;
       width: 100%;

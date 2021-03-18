@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size:62.5%;
   }
   body {
-  background: ${({ theme }) => theme.color__background};
+  background: ${({ theme }) => theme.color__primary};
     color: ${({ theme }) => theme.color__text};  
     height: 100vh;
     overflow-x: hidden;
