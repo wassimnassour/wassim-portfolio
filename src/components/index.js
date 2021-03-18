@@ -15,7 +15,6 @@ import Seo from "./seo/seo";
 import Pagination from "../components/pagination/pagination";
 import SocialMediaIcons from "./socialMediaIcons/socialMediaIcons";
 import Post from "./post/post";
-import Alert from "./alert";
 export {
   Header,
   Footer,
@@ -35,5 +34,4 @@ export {
   Pagination,
   SocialMediaIcons,
   Post,
-  Alert,
 };
