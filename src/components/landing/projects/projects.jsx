@@ -47,32 +47,30 @@ const Project = () => {
   return (
     <ProjectSectionContainer>
       <Title> Open Source Projects</Title>
-      <Fade bottom>
-        <ProjectWrapper>
-          {edges.map(({ node }) => {
-            return (
-              <ProjectCard
-                key={node.id}
-                name={node.name}
-                url={node.homepageUrl}
-                githubUrl={node.url}
-                stars={node.stargazers.totalCount}
-                primaryLanguage={node.primaryLanguage.name}
-                forkCount={node.forkCount}
-                description={node.description}
-              />
-            );
-          })}
-          <div className="button">
-            <CustomButton
-            type="external"
-              color="black"
-              content="See more"
-              url="https://github.com/wassimnassour"
+      <ProjectWrapper>
+        {edges.map(({ node }) => {
+          return (
+            <ProjectCard
+              key={node.id}
+              name={node.name}
+              url={node.homepageUrl}
+              githubUrl={node.url}
+              stars={node.stargazers.totalCount}
+              primaryLanguage={node.primaryLanguage.name}
+              forkCount={node.forkCount}
+              description={node.description}
             />
-          </div>
-        </ProjectWrapper>
-      </Fade>
+          );
+        })}
+        <div className="button">
+          <CustomButton
+            type="external"
+            color="black"
+            content="See more"
+            url="https://github.com/wassimnassour"
+          />
+        </div>
+      </ProjectWrapper>
     </ProjectSectionContainer>
   );
 };
