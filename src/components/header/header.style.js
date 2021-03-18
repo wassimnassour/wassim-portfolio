@@ -75,18 +75,3 @@ export const NavLinksWrapper = styled.div`
 export const A = styled(Link)`
   ${link}
 `;
-
-export const ThemeButton = styled.button`
-  background: transparent;
-  border: none;
-
-  color: ${({ theme }) => theme.color__text};
-
-  font-size: 4rem;
-
-  display: flex;
-  height: 3rem;
-  align-items: center;
-  outline: none;
-  transform: rotateZ(-16deg);
-`;
