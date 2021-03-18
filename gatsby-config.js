@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+console.log(process.env);
 
 module.exports = {
   siteMetadata: {
@@ -65,7 +66,7 @@ module.exports = {
       resolve: `gatsby-source-github-api`,
       options: {
         // token: required by the GitHub API
-        token: process.env.GITHUB_LOGIN,
+        token: process.env.GATSBY_GITHUB_LOGIN,
 
         // GraphQLquery: defaults to a search query
         graphQLQuery: `query ($author: String = "", $userFirst: Int = 0) {
