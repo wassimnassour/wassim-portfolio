@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-
 import { BlogContainer, BlogWrapper } from "./blog.style";
 import { Title } from "../../utilityStyle";
 import { CustomButton, Post } from "../../index";

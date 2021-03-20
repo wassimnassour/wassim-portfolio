@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import { TiArrowRightThick } from "react-icons/ti";
-import Fade from "react-reveal/Fade";
 import { SocialMediaIcons } from "../../index";
 import { useFixed } from "../../../hook/useFixed";
 import {

@@ -1,7 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Fade from "react-reveal/Fade";
-
 import { Title } from "../../utilityStyle";
 import { ProjectSectionContainer, ProjectWrapper } from "./project.style";
 import { CustomButton } from "../../index";
