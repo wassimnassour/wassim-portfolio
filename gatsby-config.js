@@ -5,13 +5,16 @@ console.log(process.env);
 
 module.exports = {
   siteMetadata: {
-    image: "/images/portfolio.png",
-    defaultTitle: "wassimnassour",
-    description:
-      "Wassim Nassour Self-taught front-end developer . i built this Portfolio With React and Gatsby ",
-    author: "@wassimnassour",
-    twitterUsername: "@wassimnassour",
-    url: "https://wassimnassour.vercel.app",
+    title: `Portfolio`,
+    author: {
+      name: `Wassim Nassour`,
+      summary: `React/React Native Developer who lives and works in Casablanca building useful things.`,
+    },
+    description: `React / React Native Develope`,
+    siteUrl: `https://wassimnassour.vercel.app/`,
+    social: {
+      twitter: `wassimnassour`,
+    },
   },
 
   plugins: [
