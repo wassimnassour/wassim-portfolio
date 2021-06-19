@@ -64,43 +64,6 @@ module.exports = {
         display: "swap",
       },
     },
-
-    {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        // token: required by the GitHub API
-        token: process.env.GATSBY_GITHUB_LOGIN,
-
-        // GraphQLquery: defaults to a search query
-        graphQLQuery: `query ($author: String = "", $userFirst: Int = 0) {
-    user(login: $author) {
-      repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC} privacy: PUBLIC, isFork: false) {
-        edges {
-          node {
-            id
-            description
-            primaryLanguage {
-            name
-            }
-            forkCount
-            homepageUrl
-            name
-            url
-            stargazers {
-              totalCount
-            }
-
-          }
-        }
-      }
-    }
-  }`,
-        variables: {
-          userFirst: 5,
-          author: "wassimnassour",
-        },
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

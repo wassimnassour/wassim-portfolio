@@ -17,7 +17,6 @@ export default function Home() {
       />
       <HomeContent />
       <Skills />
-      <Project />
       <Blog />
     </Layout>
   );
